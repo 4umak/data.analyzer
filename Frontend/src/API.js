@@ -1,7 +1,4 @@
-/**
- * Created by chaika on 09.02.16.
- */
-var API_URL = "http://localhost:4040";
+var API_URL = "https://dry-brook-17809.herokuapp.com/";
 
 function backendGet(url, callback) {
     $.ajax({

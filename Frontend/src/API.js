@@ -1,4 +1,4 @@
-var API_URL = "https://dry-brook-17809.herokuapp.com/";
+var API_URL = "http://localhost:4040";
 
 function backendGet(url, callback) {
     $.ajax({

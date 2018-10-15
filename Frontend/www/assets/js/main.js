@@ -75,17 +75,19 @@ $(function () {
                     if (res.newItem) alert('Товар успішно добавлений');
                 }
             })
+        }else {
+            alert('Перевірте коректність даних!');
         }
     });
 });
 
 function validator(id, articul, name, brand, price) {
     var valid = true;
-    if (id.length === 0) valid = false;
-    if (articul.length === 0) valid = false;
+    if (id.length === 0 || isNaN(id)) valid = false;
+    if (articul.length === 0 || isNaN(articul)) valid = false;
     if (name.length === 0) valid = false;
     if (brand.length === 0) valid = false;
-    if (price.length === 0) valid = false;
+    if (price.length === 0 || isNaN(price) || price.toString().indexOf('.') != -1) valid = false;
     return valid;
 }
 },{"./API.js":1}]},{},[2]);

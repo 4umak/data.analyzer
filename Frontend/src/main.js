@@ -15,22 +15,7 @@ $(function () {
         $('.products-table-container').toggle();
     });
 
-    var name = {
-        name: 'techno'
-    };
-    API.getUrls(name, function (err, res) {
-        if (!err) {
-            for (var i = 0; i < res.length; i++) {
-                var url = {
-                    url: res[i]
-                };
-                API.parseTechno(url, function (err, result) {
-                    if(err) console.log(err);
-                    console.log(result);
-                })
-            }
-        }
-    });
+
 
     $('.add-to-db').click(function () {
         var id = $id.val();

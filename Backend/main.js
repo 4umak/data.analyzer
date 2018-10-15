@@ -14,6 +14,7 @@ function configureEndpoints(app) {
     app.post('/api/parseTechno/', api.parseTechno);
 
     app.get('/', pages.mainPage);
+    app.get('/parsed.html', pages.parsedPage);
 
     app.use(express.static(path.join(__dirname, '../Frontend/www')));
 }

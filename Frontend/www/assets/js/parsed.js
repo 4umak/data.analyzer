@@ -51,89 +51,34 @@ var ejs = require('ejs');
 exports.oneItem = ejs.compile("<div class=\"row\">\n    <div class=\"one-item articul col-xs-1\"><%= item.id%></div>\n    <div class=\"one-item name col-xs-2\"><%= item.articul%></div>\n    <div class=\"one-item brand col-xs-4\"><%= item.name%></div>\n    <div class=\"one-item supplier col-xs-2\"><%= item.brand%></div>\n    <div class=\"one-item price col-xs-1\"><%= item.price%>$</div>\n    <div class=\"one-item action col-xs-2\"><button>Delete</button></div>\n</div>");
 exports.oneParsed = ejs.compile("<div class=\"one-item col-md-2\">10-10-2013 14:54</div>\n<div class=\"one-item col-md-2\"><%= item.competitor%></div>\n<div class=\"one-item col-md-6\"><%= item.name%></div>\n<div class=\"one-item col-md-2\"><%= item.price%></div>");
 },{"ejs":5}],3:[function(require,module,exports){
-// var parse = require('./parserExcel.js');
 var API = require('./API');
 var Templates = require('./Templates');
-
-var $products = $('#products');
-var $id = $('#id');
-var $articul = $('#articul');
-var $name = $('#name');
-var $brand = $('#brand');
-var $price = $('#price');
+var $container = $('#products');
 
 $(function () {
-    initialiseGoods();
-    $('#see-products').click(function () {
-        $('.products-table-container').toggle();
-    });
-
-
-
-    $('.add-to-db').click(function () {
-        var id = $id.val();
-        var articul = $articul.val();
-        var name = $name.val();
-        var brand = $brand.val();
-        var price = $price.val();
-        if (validator(id, articul, name, brand, price)) {
-            var item = {
-                id: id,
-                articul: articul,
-                name: name,
-                brand: brand,
-                price: price
-            };
-            API.writeGoods(item, function (err, res) {
-                if (!err) {
-                    $id.val('');
-                    $articul.val('');
-                    $name.val('');
-                    $brand.val('');
-                    $price.val('');
-                    if (res.isExist) alert('Такий товар вже є');
-                    if (res.newItem) addLast(item);
-                }
-            })
-        }else {
-            alert('Перевірте коректність даних!');
+    var name = {
+        name: 'techno'
+    };
+    API.getUrls(name, function (err, res) {
+        if (!err) {
+            for (var i = 0; i < res.length; i++) {
+                var url = {
+                    url: res[i]
+                };
+                API.parseTechno(url, function (err, result) {
+                    if(err) console.log(err);
+                    console.log(result);
+                    showParsed(result);
+                })
+            }
         }
     });
 });
 
-function validator(id, articul, name, brand, price) {
-    var valid = true;
-    if (id.length === 0 || isNaN(id)) valid = false;
-    if (articul.length === 0 || isNaN(articul)) valid = false;
-    if (name.length === 0) valid = false;
-    if (brand.length === 0) valid = false;
-    if (price.length === 0 || isNaN(price) || price.toString().indexOf('.') != -1) valid = false;
-    return valid;
-}
-
-function showGoods(list) {
-
-    function showOneItem(item) {
-        var html_code = Templates.oneItem({item: item});
-        var $node = $(html_code);
-        $products.append($node);
-    }
-
-    list.forEach(showOneItem);
-}
-
-function initialiseGoods() {
-    API.showGoods(function (err, res) {
-        if(!err) {
-            showGoods(res);
-        }
-    })
-}
-
-function addLast(item) {
-    var html_code = Templates.oneItem({item: item});
+function showParsed(item) {
+    var html_code = Templates.oneParsed({item: item});
     var $node = $(html_code);
-    $products.append($node);
+    $container.append($node);
 }
 },{"./API":1,"./Templates":2}],4:[function(require,module,exports){
 

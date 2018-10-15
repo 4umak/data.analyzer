@@ -10,6 +10,8 @@ function configureEndpoints(app) {
     app.get('/api/getGoods/', api.showGoods);
 
     app.post('/api/writeGoods/', api.writeGoods);
+    app.post('/api/getUrls/', api.getUrls);
+    app.post('/api/parseTechno/', api.parseTechno);
 
     app.get('/', pages.mainPage);
 

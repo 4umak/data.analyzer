@@ -25,16 +25,17 @@ var parsed = new mongoose.Schema({
     time: {type: String}
 });
 
-var urlscomp = new mongoose.Schema({
+
+
+var competitors = new mongoose.Schema({
     id: {type: String, unique: true},
-    articul: {type: String},
     name: {type: String},
-    url: {type: String}
+    urls: [],
 });
 
 var Goods = mongoose.model('goods', one_item);
 var Parsed = mongoose.model('parsed', parsed);
-var UrlsCompetitors = mongoose.model('competitors', urlscomp);
+var UrlsCompetitors = mongoose.model('competitors', competitors);
 
 exports.Goods = Goods;
 exports.Parsed = Parsed;

@@ -35,3 +35,11 @@ exports.writeGoods = function (one_item, callback) {
 exports.showGoods = function (callback) {
     backendGet('/api/getGoods/', callback);
 };
+
+exports.getUrls = function (name, callback) {
+    backendPost('/api/getUrls/', name, callback);
+};
+
+exports.parseTechno = function (url, callback) {
+  backendPost('/api/parseTechno/', url, callback);
+};

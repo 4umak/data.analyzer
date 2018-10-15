@@ -1,6 +1,8 @@
 // var parse = require('./parserExcel.js');
-var API = require('./API.js');
+var API = require('./API');
+var Templates = require('./Templates');
 
+var $products = $('#products');
 var $id = $('#id');
 var $articul = $('#articul');
 var $name = $('#name');
@@ -8,14 +10,28 @@ var $brand = $('#brand');
 var $price = $('#price');
 
 $(function () {
-    API.showGoods(function (err, res) {
-       if (!err) {
-           console.log(res);
-       }
-    });
+    initialiseGoods();
     $('#see-products').click(function () {
-        $('.products-table-container').hide();
+        $('.products-table-container').toggle();
     });
+
+    var name = {
+        name: 'techno'
+    };
+    API.getUrls(name, function (err, res) {
+        if (!err) {
+            for (var i = 0; i < res.length; i++) {
+                var url = {
+                    url: res[i]
+                };
+                API.parseTechno(url, function (err, result) {
+                    if(err) console.log(err);
+                    console.log(result);
+                })
+            }
+        }
+    });
+
     $('.add-to-db').click(function () {
         var id = $id.val();
         var articul = $articul.val();
@@ -32,8 +48,13 @@ $(function () {
             };
             API.writeGoods(item, function (err, res) {
                 if (!err) {
+                    $id.val('');
+                    $articul.val('');
+                    $name.val('');
+                    $brand.val('');
+                    $price.val('');
                     if (res.isExist) alert('Такий товар вже є');
-                    if (res.newItem) alert('Товар успішно добавлений');
+                    if (res.newItem) addLast(item);
                 }
             })
         }
@@ -48,4 +69,29 @@ function validator(id, articul, name, brand, price) {
     if (brand.length === 0) valid = false;
     if (price.length === 0) valid = false;
     return valid;
+}
+
+function showGoods(list) {
+
+    function showOneItem(item) {
+        var html_code = Templates.oneItem({item: item});
+        var $node = $(html_code);
+        $products.append($node);
+    }
+
+    list.forEach(showOneItem);
+}
+
+function initialiseGoods() {
+    API.showGoods(function (err, res) {
+        if(!err) {
+            showGoods(res);
+        }
+    })
+}
+
+function addLast(item) {
+    var html_code = Templates.oneItem({item: item});
+    var $node = $(html_code);
+    $products.append($node);
 }

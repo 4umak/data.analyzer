@@ -9,10 +9,10 @@ function configureEndpoints(app) {
 
     app.get('/', pages.mainPage);
 
-    app.use(express.static(path.join(__dirname, '../Frontend')));
+    app.use(express.static(path.join(__dirname, '../Frontend/www')));
 }
 
-function stratServer(port) {
+function startServer(port) {
     var app = express();
 
     app.set('views', path.join(__dirname, 'views'));
@@ -30,4 +30,4 @@ function stratServer(port) {
     });
 }
 
-exports.startServer = stratServer;
+exports.startServer = startServer;

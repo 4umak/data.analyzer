@@ -1,16 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>DataAnalyzer</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet/less" type="text/css" href="assets/less/main.less" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
-</head>
-<body>
-<div class="container">
-
+<% include common/heade.ejs %>
+<div class="top-panel">
+    <div class="menu">
+        <span class="menu-item" id="see-products"><a>See product list</a></span>
+        <!--<span class="menu-item"><a>Add product</a></span>-->
+    </div>
 </div>
-<div class=""></div>
-</body>
-</html>
+<div class="add-product-container">
+    <!--<input id="our-file" type="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"  />-->
+    <!--<button id="accept">Accept</button>-->
+    <div class="row">
+        <div class="ad col-md-2">Articul<input></div>
+        <div class="ad col-md-2">Name<input></div>
+        <div class="ad col-md-2">Brand<input></div>
+        <div class="ad col-md-2">Supplier<input/></div>
+        <div class="ad col-md-2">Price<input></div>
+        <div class="ad col-md-1"><button>Add product</button></div>
+    </div>
+</div>
+<div class="products-table-container">
+    <div class="row">
+        <div class="nm col-md-2">Articul</div>
+        <div class="nm col-md-3">Name</div>
+        <div class="nm col-md-2">Brand</div>
+        <div class="nm col-md-2">Supplier</div>
+        <div class="nm col-md-1">Price</div>
+        <div class="nm col-md-2">Action</div>
+    </div>
+    <div class="row">
+        <div class="one-item articul col-md-2">88005553535</div>
+        <div class="one-item name col-md-3">iPhone</div>
+        <div class="one-item brand col-md-2">Apple</div>
+        <div class="one-item supplier col-md-2">itBox</div>
+        <div class="one-item price col-md-1">20288$</div>
+        <div class="one-item action col-md-2"><button>Edit</button> <button>Delete</button></div>
+    </div>
+</div>
+<% include common/foot.ejs %>

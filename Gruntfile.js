@@ -6,10 +6,14 @@ module.exports = function(grunt) {
             options:      {
                 transform:  [ require('brfs') ],
                 browserifyOptions: {
-                    basedir: "Frontend/src/js/"
+                    basedir: "Frontend/src/"
                 }
             },
 
+            main: {
+                src: 'Frontend/src/main.js',
+                dest: 'Frontend/www/assets/js/main.js'
+            }
         }
     };
 
@@ -19,7 +23,9 @@ module.exports = function(grunt) {
         },
         scripts: {
             files: ['Frontend/src/**/*.js', 'Frontend/**/*.ejs', 'Frontend/src/*.js'],
-            tasks: []
+            tasks: [
+                'browserify:main'
+            ]
         }
     };
 
@@ -31,7 +37,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default',
         [
-
+            'browserify:main'
         ]
     );
 

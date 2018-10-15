@@ -18,12 +18,13 @@ body{
   top: 0;
   left: 0;
   border-bottom: solid 2px gainsboro;
+  overflow-y: hidden;
 }
 
 .menu{
-  width: 330px;
+  width: 100%;
   height: @topPanelHeight;
-  margin:0 auto;
+  text-align: center;
   line-height: @topPanelHeight;
 }
 
@@ -45,11 +46,19 @@ body{
 
 .menu-item:hover{
   padding: 10px;
+  cursor: pointer;
+}
+
+.add-product-container {
+}
+
+.add-product-container>input {
+  margin: 0 auto;
 }
 
 .products-table-container{
   padding-top: @topPanelHeight;
-  display: none;
+  //display: none;
 }
 
 .nm{

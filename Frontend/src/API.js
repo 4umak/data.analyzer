@@ -27,3 +27,11 @@ function backendPost(url, data, callback) {
         }
     })
 }
+
+exports.writeGoods = function (one_item, callback) {
+    backendPost('/api/writeGoods/', one_item, callback)
+};
+
+exports.showGoods = function (callback) {
+    backendGet('/api/getGoods/', callback);
+};

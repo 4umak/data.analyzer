@@ -7,6 +7,10 @@ function configureEndpoints(app) {
     var pages = require('./pages');
     var api = require('./api');
 
+    app.get('/api/getGoods/', api.showGoods);
+
+    app.post('/api/writeGoods/', api.writeGoods);
+
     app.get('/', pages.mainPage);
 
     app.use(express.static(path.join(__dirname, '../Frontend/www')));

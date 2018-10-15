@@ -49,7 +49,6 @@ exports.parseTechno = function (url, callback) {
 var ejs = require('ejs');
 
 exports.oneItem = ejs.compile("<div class=\"row\">\n    <div class=\"one-item articul col-xs-1\"><%= item.id%></div>\n    <div class=\"one-item name col-xs-2\"><%= item.articul%></div>\n    <div class=\"one-item brand col-xs-4\"><%= item.name%></div>\n    <div class=\"one-item supplier col-xs-2\"><%= item.brand%></div>\n    <div class=\"one-item price col-xs-1\"><%= item.price%>$</div>\n    <div class=\"one-item action col-xs-2\"><button>Delete</button></div>\n</div>");
-exports.oneParsed = ejs.compile("<div class=\"one-item col-md-2\">10-10-2013 14:54</div>\n<div class=\"one-item col-md-2\"><%= item.competitor%></div>\n<div class=\"one-item col-md-6\"><%= item.name%></div>\n<div class=\"one-item col-md-2\"><%= item.price%></div>");
 },{"ejs":5}],3:[function(require,module,exports){
 // var parse = require('./parserExcel.js');
 var API = require('./API');
@@ -68,7 +67,22 @@ $(function () {
         $('.products-table-container').toggle();
     });
 
-
+    var name = {
+        name: 'techno'
+    };
+    API.getUrls(name, function (err, res) {
+        if (!err) {
+            for (var i = 0; i < res.length; i++) {
+                var url = {
+                    url: res[i]
+                };
+                API.parseTechno(url, function (err, result) {
+                    if(err) console.log(err);
+                    console.log(result);
+                })
+            }
+        }
+    });
 
     $('.add-to-db').click(function () {
         var id = $id.val();

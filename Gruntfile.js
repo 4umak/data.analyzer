@@ -13,10 +13,6 @@ module.exports = function(grunt) {
             main: {
                 src: 'Frontend/src/main.js',
                 dest: 'Frontend/www/assets/js/main.js'
-            },
-            parsed: {
-                src: 'Frontend/src/parsed.js',
-                dest: 'Frontend/www/assets/js/parsed.js'
             }
         }
     };
@@ -28,8 +24,7 @@ module.exports = function(grunt) {
         scripts: {
             files: ['Frontend/src/**/*.js', 'Frontend/**/*.ejs', 'Frontend/src/*.js'],
             tasks: [
-                'browserify:main',
-                'browserify:parsed'
+                'browserify:main'
             ]
         }
     };
@@ -42,8 +37,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default',
         [
-            'browserify:main',
-            'browserify:parsed'
+            'browserify:main'
         ]
     );
 

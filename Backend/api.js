@@ -71,8 +71,67 @@ exports.parseTechno = function (req, res) {
             var obj = {
                 competitor: "A-Texно",
                 name: data.name,
-                price: data.price,
             };
+            if(typeof data.price === "undefined")
+                obj.price = "Немає в наявності";
+            else
+                obj.price = data.price;
             res.send(obj);
         })
 };
+
+exports.parseNobu = function(req,res){
+    var url = req.body.url;
+    osmosis
+        .get(url)
+        .set({'name':'#pagetitle','price':'.price'})
+        .data(function (data) {
+            var obj = {
+                competitor : "Nobu",
+                name : data.name,
+            };
+            if(typeof data.price === "undefined")
+                obj.price = "Немає в наявності";
+            else
+                obj.price = data.price;
+            res.send(obj);
+        })
+};
+
+exports.parseOfficeman = function(req,res){
+    var url = req.body.url;
+    osmosis
+        .get(url)
+        .set({'name':'h1','price':'.main'})
+        .data(function (data) {
+            var obj = {
+                competitor : "Officeman",
+                name : data.name,
+            };
+            if(typeof data.price === "undefined")
+                obj.price = "Немає в наявності";
+            else
+                obj.price = data.price;
+            res.send(obj);
+        })
+};
+
+exports.parseMobilluck = function(req,res){
+    var url = req.body.url;
+    osmosis
+        .get(url)
+        .set({'name':'.mgood_title','price':'.price'})
+        .data(function (data) {
+            var obj = {
+                competitor : "Mobilluck",
+                name : data.name,
+            };
+            if(typeof data.price === "undefined")
+                obj.price = "Немає в наявності";
+            else
+                obj.price = data.price;
+            console.log(obj);
+        })
+};
+
+

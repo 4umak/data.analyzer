@@ -171,6 +171,6 @@ exports.parseMobilluck = function(req,res){
                 obj.price = "Немає в наявності";
             else
                 obj.price = data.price;
-            console.log(obj);
+            res.send(obj);
         })
 };

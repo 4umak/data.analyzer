@@ -48,6 +48,18 @@ exports.parseTechno = function (url, callback) {
 exports.parseUrls = function (urls, callback) {
     backendPost('/api/parseUrls/', urls, callback)
 };
+
+exports.parseMobilluck = function (url, callback) {
+  backendPost('/api/parseMobilluck/', url, callback);
+};
+
+exports.parseNobu = function (url, callback) {
+    backendPost('/api/parseNobu/', url, callback);
+};
+
+exports.parseOfficeman = function (url, callback) {
+  backendPost('/api/parseOfficeman/', url, callback);
+};
 },{}],2:[function(require,module,exports){
 var API = require('./API');
 var $name = $('#name');

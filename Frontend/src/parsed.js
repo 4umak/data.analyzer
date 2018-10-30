@@ -3,13 +3,14 @@ var Templates = require('./Templates');
 var $container = $('#products');
 
 $(function () {
-    // techno();
-    // mobilluck();
-    // nobu();
-    // officeman();
+   // techno();
+   // mobilluck();
+    nobu();
+   // officeman();
 });
 
 function showParsed(item) {
+    console.log("parsed!");
     var html_code = Templates.oneParsed({item: item});
     var $node = $(html_code);
     $container.append($node);

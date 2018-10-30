@@ -13,3 +13,11 @@ exports.parsedPage = function (req, res) {
       js: 'parsed'
   })
 };
+
+exports.parsedUrls = function (req, res) {
+  res.render('parsedUrls', {
+      pageTitle: 'Data Analyzer',
+      less: 'urls',
+      js: 'urls'
+  })
+};

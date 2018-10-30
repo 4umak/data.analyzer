@@ -55,8 +55,10 @@ exports.getUrls = function (req, res) {
             name: name
         },
         function (err, data) {
-            if (!err) {
-                res.send(data.urls);
+            if (data) {
+                res.send({empty: false, urls: data.urls});
+            } else {
+                res.send({empty:true});
             }
         }
     );
@@ -75,4 +77,43 @@ exports.parseTechno = function (req, res) {
             };
             res.send(obj);
         })
+};
+
+exports.writeCompetitors = function (req, res) {
+    var name = req.body.name;
+    var urls = req.body.urls;
+
+    UrlsCompetitors.findOne(
+        {
+            name: name
+        },
+        function (err, competitor) {
+            if (competitor) {
+                var a = competitor.urls;
+                for (var i = 0; i < urls.length; i++) {
+                    a.push(urls[i]);
+                }
+                UrlsCompetitors.update(
+                    {
+                       name: name
+                    },
+                    {
+                        urls: a
+                    },
+                    function () {}
+                );
+                res.send({success: true});
+            } else {
+                var one_competitor = new UrlsCompetitors({
+                    name: name,
+                    urls: urls
+                });
+                one_competitor.save(function (err) {
+                    if (!err) {
+                        res.send({success: true})
+                    }
+                })
+            }
+        }
+    )
 };

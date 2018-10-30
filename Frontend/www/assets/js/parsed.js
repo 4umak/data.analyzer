@@ -44,12 +44,16 @@ exports.getUrls = function (name, callback) {
 exports.parseTechno = function (url, callback) {
   backendPost('/api/parseTechno/', url, callback);
 };
+
+exports.parseUrls = function (urls, callback) {
+    backendPost('/api/parseUrls/', urls, callback)
+};
 },{}],2:[function(require,module,exports){
 
 var ejs = require('ejs');
 
 exports.oneItem = ejs.compile("<div class=\"row\">\n    <div class=\"one-item articul col-xs-1\"><%= item.id%></div>\n    <div class=\"one-item name col-xs-2\"><%= item.articul%></div>\n    <div class=\"one-item brand col-xs-4\"><%= item.name%></div>\n    <div class=\"one-item supplier col-xs-2\"><%= item.brand%></div>\n    <div class=\"one-item price col-xs-1\"><%= item.price%>$</div>\n    <div class=\"one-item action col-xs-2\"><button>Delete</button></div>\n</div>");
-exports.oneParsed = ejs.compile("<div class=\"one-item col-md-2\">10-10-2013 14:54</div>\n<div class=\"one-item col-md-2\"><%= item.competitor%></div>\n<div class=\"one-item col-md-6\"><%= item.name%></div>\n<div class=\"one-item col-md-2\"><%= item.price%></div>");
+exports.oneParsed = ejs.compile("<div class=\"row\">\n    <div class=\"one-item col-xs-2\">10-10-2013 14:54</div>\n    <div class=\"one-item col-xs-2\"><%= item.competitor%></div>\n    <div class=\"one-item col-xs-6\"><%= item.name%></div>\n    <div class=\"one-item col-xs-2\"><%= item.price%></div>\n</div>");
 },{"ejs":5}],3:[function(require,module,exports){
 var API = require('./API');
 var Templates = require('./Templates');
@@ -61,15 +65,15 @@ $(function () {
     };
     API.getUrls(name, function (err, res) {
         if (!err) {
-            for (var i = 0; i < res.length; i++) {
+            for (var i = 0; i < res.urls.length; i++) {
                 var url = {
-                    url: res[i]
+                    url: res.urls[i]
                 };
                 API.parseTechno(url, function (err, result) {
                     if(err) console.log(err);
                     console.log(result);
                     showParsed(result);
-                })
+                });
             }
         }
     });

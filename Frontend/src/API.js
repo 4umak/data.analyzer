@@ -43,3 +43,7 @@ exports.getUrls = function (name, callback) {
 exports.parseTechno = function (url, callback) {
   backendPost('/api/parseTechno/', url, callback);
 };
+
+exports.parseUrls = function (urls, callback) {
+    backendPost('/api/parseUrls/', urls, callback)
+};

@@ -44,12 +44,16 @@ exports.getUrls = function (name, callback) {
 exports.parseTechno = function (url, callback) {
   backendPost('/api/parseTechno/', url, callback);
 };
+
+exports.parseUrls = function (urls, callback) {
+    backendPost('/api/parseUrls/', urls, callback)
+};
 },{}],2:[function(require,module,exports){
 
 var ejs = require('ejs');
 
 exports.oneItem = ejs.compile("<div class=\"row\">\n    <div class=\"one-item articul col-xs-1\"><%= item.id%></div>\n    <div class=\"one-item name col-xs-2\"><%= item.articul%></div>\n    <div class=\"one-item brand col-xs-4\"><%= item.name%></div>\n    <div class=\"one-item supplier col-xs-2\"><%= item.brand%></div>\n    <div class=\"one-item price col-xs-1\"><%= item.price%>$</div>\n    <div class=\"one-item action col-xs-2\"><button>Delete</button></div>\n</div>");
-exports.oneParsed = ejs.compile("<div class=\"one-item col-md-2\">10-10-2013 14:54</div>\n<div class=\"one-item col-md-2\"><%= item.competitor%></div>\n<div class=\"one-item col-md-6\"><%= item.name%></div>\n<div class=\"one-item col-md-2\"><%= item.price%></div>");
+exports.oneParsed = ejs.compile("<div class=\"row\">\n    <div class=\"one-item col-xs-2\">10-10-2013 14:54</div>\n    <div class=\"one-item col-xs-2\"><%= item.competitor%></div>\n    <div class=\"one-item col-xs-6\"><%= item.name%></div>\n    <div class=\"one-item col-xs-2\"><%= item.price%></div>\n</div>");
 },{"ejs":5}],3:[function(require,module,exports){
 // var parse = require('./parserExcel.js');
 var API = require('./API');
@@ -143,23 +147,14 @@ function readExcel() {
 }
 
 function filePicked(oEvent) {
-    // Get The File From The Input
     var oFile = oEvent.target.files[0];
-    var sFilename = oFile.name;
-    // Create A File Reader HTML5
     var reader = new FileReader();
-
-    // Ready The Event For When A File Gets Selected
     reader.onload = function (e) {
         var data = e.target.result;
         var cfb = XLS.CFB.read(data, {type: 'binary'});
         var wb = XLS.parse_xlscfb(cfb);
-        // Loop Over Each Sheet
         wb.SheetNames.forEach(function (sheetName) {
-            // Obtain The Current Row As CSV
-            var sCSV = XLS.utils.make_csv(wb.Sheets[sheetName]);
             var oJS = XLS.utils.sheet_to_row_object_array(wb.Sheets[sheetName]);
-
             $('#accept').click(function () {
                 oJS.forEach(function (one) {
                     API.writeGoods(one, function (err, res) {
@@ -173,8 +168,6 @@ function filePicked(oEvent) {
             });
         });
     };
-
-    // Tell JS To Start Reading The File.. You could delay this if desired
     reader.readAsBinaryString(oFile);
 }
 },{"./API":1,"./Templates":2}],4:[function(require,module,exports){

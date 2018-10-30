@@ -25,10 +25,7 @@ var parsed = new mongoose.Schema({
     time: {type: String}
 });
 
-
-
 var competitors = new mongoose.Schema({
-    id: {type: String, unique: true},
     name: {type: String},
     urls: [],
 });

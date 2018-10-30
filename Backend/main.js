@@ -12,9 +12,11 @@ function configureEndpoints(app) {
     app.post('/api/writeGoods/', api.writeGoods);
     app.post('/api/getUrls/', api.getUrls);
     app.post('/api/parseTechno/', api.parseTechno);
+    app.post('/api/parseUrls/', api.writeCompetitors);
 
     app.get('/', pages.mainPage);
     app.get('/parsed.html', pages.parsedPage);
+    app.get('/urls.html', pages.parsedUrls);
 
     app.use(express.static(path.join(__dirname, '../Frontend/www')));
 }

@@ -82,19 +82,19 @@ exports.parseTechno = function (req, res) {
             var year = current.getFullYear();
             var hour = current.getHours();
             var minute = current.getMinutes();
-            var date = day + '.' + month + '.' + year + ' ' + hour + ':' + minute;
+            var second = current.getSeconds();
+            var date = year + '-' + month + '-' + day + 'T' + hour + ':' + minute + ':' + second + 'Z';
             var techno = new Parsed({
                 name: 'A-Техно',
                 item_name: data.name,
                 price: price,
                 time: date
             });
-            res.send(techno);
-            // techno.save(function(err){
-            //     if(!err) {
-            //         res.send({next: true});
-            //     }
-            // });
+            techno.save(function(err){
+                if(!err) {
+                    console.log('success');
+                }
+            });
         })
 };
 
@@ -116,19 +116,19 @@ exports.parseNobu = function(req,res){
             var year = current.getFullYear();
             var hour = current.getHours();
             var minute = current.getMinutes();
-            var date = day + '.' + month + '.' + year + ' ' + hour + ':' + minute;
+            var second = current.getSeconds();
+            var date = year + '-' + month + '-' + day + 'T' + hour + ':' + minute + ':' + second + 'Z';
             var nobu = new Parsed({
                 name: 'Nobu',
                 item_name: data.name,
                 price: price,
                 time: date
             });
-            res.send(nobu);
-            // nobu.save(function(err){
-            //     if(!err) {
-            //         res.send({next: true});
-            //     }
-            // });
+            nobu.save(function(err){
+                if(!err) {
+                    console.log('success');
+                }
+            });
         })
 };
 
@@ -149,19 +149,19 @@ exports.parseOfficeman = function(req,res){
             var year = current.getFullYear();
             var hour = current.getHours();
             var minute = current.getMinutes();
-            var date = day + '.' + month + '.' + year + ' ' + hour + ':' + minute;
+            var second = current.getSeconds();
+            var date = year + '-' + month + '-' + day + 'T' + hour + ':' + minute + ':' + second + 'Z';
             var officeman = new Parsed({
                 name: 'Officeman',
                 item_name: data.name,
                 price: price,
                 time: date
             });
-            res.send(officeman);
-            // officeman.save(function(err){
-            //     if(!err) {
-            //         res.send({next: true});
-            //     }
-            // });
+            officeman.save(function(err){
+                if(!err) {
+                    console.log('success');
+                }
+            });
         })
 };
 
@@ -182,19 +182,19 @@ exports.parseMobilluck = function(req,res){
             var year = current.getFullYear();
             var hour = current.getHours();
             var minute = current.getMinutes();
-            var date = day + '.' + month + '.' + year + ' ' + hour + ':' + minute;
+            var second = current.getSeconds();
+            var date = year + '-' + month + '-' + day + 'T' + hour + ':' + minute + ':' + second + 'Z';
             var mobilluck = new Parsed({
                 name: 'Mobilluck',
                 item_name: data.name,
                 price: price,
                 time: date
             });
-            res.send(mobilluck);
-            // mobilluck.save(function(err){
-            //     if(!err) {
-            //         res.send({next: true});
-            //     }
-            // });
+            mobilluck.save(function(err){
+                if(!err) {
+                    console.log('success');
+                }
+            });
         })
 };
 

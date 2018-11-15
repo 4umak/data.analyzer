@@ -56,9 +56,7 @@ function filterByProduct(item_name, datset) {
 function filterByPeriod(item_name, date1, date2, dataset) {
     let data = [];
     let goods = getByName(item_name, dataset);
-    //console.log(goods);
     for (let i =0; i< goods.length;i++) {
-        //console.log(goods[i]);
        if (Date.parse(goods[i].time) > date1 && Date.parse(goods[i].time) < date2)
             data.push(goods[i]);
     }

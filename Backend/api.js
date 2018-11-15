@@ -71,10 +71,11 @@ exports.parseTechno = function (req, res) {
         .get(url)
         .set({'name':'h1', 'price': '#price'})
         .data(function (data) {
+            var price;
             if(typeof data.price === "undefined")
-                var price = "Немає в наявності";
+                price = "Немає в наявності";
             else
-                var price = data.price;
+                price = data.price;
             var current = new Date();
             var day = current.getDate();
             var month = current.getMonth() + 1;
@@ -90,6 +91,106 @@ exports.parseTechno = function (req, res) {
             });
             res.send(techno);
             // techno.save(function(err){
+            //     if(!err) {
+            //         res.send({next: true});
+            //     }
+            // });
+        })
+};
+
+exports.parseNobu = function(req,res){
+    var url = req.body.url;
+
+    osmosis
+        .get(url)
+        .set({'name':'#pagetitle','price':'.price'})
+        .data(function (data) {
+            var price;
+            if(typeof data.price === "undefined")
+                price = "Немає в наявності";
+            else
+                price = data.price;
+            var current = new Date();
+            var day = current.getDate();
+            var month = current.getMonth() + 1;
+            var year = current.getFullYear();
+            var hour = current.getHours();
+            var minute = current.getMinutes();
+            var date = day + '.' + month + '.' + year + ' ' + hour + ':' + minute;
+            var nobu = new Parsed({
+                name: 'Nobu',
+                item_name: data.name,
+                price: price,
+                time: date
+            });
+            res.send(nobu);
+            // nobu.save(function(err){
+            //     if(!err) {
+            //         res.send({next: true});
+            //     }
+            // });
+        })
+};
+
+exports.parseOfficeman = function(req,res){
+    var url = req.body.url;
+    osmosis
+        .get(url)
+        .set({'name':'h1','price':'.main'})
+        .data(function (data) {
+            var price;
+            if(typeof data.price === "undefined")
+                price = "Немає в наявності";
+            else
+                price = data.price;
+            var current = new Date();
+            var day = current.getDate();
+            var month = current.getMonth() + 1;
+            var year = current.getFullYear();
+            var hour = current.getHours();
+            var minute = current.getMinutes();
+            var date = day + '.' + month + '.' + year + ' ' + hour + ':' + minute;
+            var officeman = new Parsed({
+                name: 'Officeman',
+                item_name: data.name,
+                price: price,
+                time: date
+            });
+            res.send(officeman);
+            // officeman.save(function(err){
+            //     if(!err) {
+            //         res.send({next: true});
+            //     }
+            // });
+        })
+};
+
+exports.parseMobilluck = function(req,res){
+    var url = req.body.url;
+    osmosis
+        .get(url)
+        .set({'name':'.mgood_title','price':'.price'})
+        .data(function (data) {
+            var price;
+            if(typeof data.price === "undefined")
+                price = "Немає в наявності";
+            else
+                price = data.price;
+            var current = new Date();
+            var day = current.getDate();
+            var month = current.getMonth() + 1;
+            var year = current.getFullYear();
+            var hour = current.getHours();
+            var minute = current.getMinutes();
+            var date = day + '.' + month + '.' + year + ' ' + hour + ':' + minute;
+            var mobilluck = new Parsed({
+                name: 'Mobilluck',
+                item_name: data.name,
+                price: price,
+                time: date
+            });
+            res.send(mobilluck);
+            // mobilluck.save(function(err){
             //     if(!err) {
             //         res.send({next: true});
             //     }
@@ -113,7 +214,7 @@ exports.writeCompetitors = function (req, res) {
                 }
                 UrlsCompetitors.update(
                     {
-                       name: name
+                        name: name
                     },
                     {
                         urls: a
@@ -134,58 +235,4 @@ exports.writeCompetitors = function (req, res) {
             }
         }
     )
-};
-
-exports.parseNobu = function(req,res){
-    var url = req.body.url;
-    osmosis
-        .get(url)
-        .set({'name':'#pagetitle','price':'.price'})
-        .data(function (data) {
-            var obj = {
-                competitor : "Nobu",
-                name : data.name,
-            };
-            if(typeof data.price === "undefined")
-                obj.price = "Немає в наявності";
-            else
-                obj.price = data.price;
-            res.send(obj);
-        })
-};
-
-exports.parseOfficeman = function(req,res){
-    var url = req.body.url;
-    osmosis
-        .get(url)
-        .set({'name':'h1','price':'.main'})
-        .data(function (data) {
-            var obj = {
-                competitor : "Officeman",
-                name : data.name,
-            };
-            if(typeof data.price === "undefined")
-                obj.price = "Немає в наявності";
-            else
-                obj.price = data.price;
-            res.send(obj);
-        })
-};
-
-exports.parseMobilluck = function(req,res){
-    var url = req.body.url;
-    osmosis
-        .get(url)
-        .set({'name':'.mgood_title','price':'.price'})
-        .data(function (data) {
-            var obj = {
-                competitor : "Mobilluck",
-                name : data.name,
-            };
-            if(typeof data.price === "undefined")
-                obj.price = "Немає в наявності";
-            else
-                obj.price = data.price;
-            res.send(obj);
-        })
 };

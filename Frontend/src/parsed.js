@@ -3,10 +3,12 @@ var Templates = require('./Templates');
 var $container = $('#products');
 
 $(function () {
-   // techno();
-   // mobilluck();
-    nobu();
-   // officeman();
+    var d = Date();
+    console.log(d.getHours());
+    techno();
+    mobilluck();
+    //nobu();
+    officeman();
 });
 
 function showParsed(item) {

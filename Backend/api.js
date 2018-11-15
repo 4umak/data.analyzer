@@ -90,11 +90,11 @@ exports.parseTechno = function (req, res) {
                 time: date
             });
             res.send(techno);
-            // techno.save(function(err){
-            //     if(!err) {
-            //         res.send({next: true});
-            //     }
-            // });
+            techno.save(function(err){
+                 if(!err) {
+                     res.send({next: true});
+                 }
+             });
         })
 };
 

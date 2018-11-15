@@ -66,19 +66,34 @@ exports.getUrls = function (req, res) {
 
 exports.parseTechno = function (req, res) {
     var url = req.body.url;
+
     osmosis
         .get(url)
         .set({'name':'h1', 'price': '#price'})
         .data(function (data) {
-            var obj = {
-                competitor: "A-Texно",
-                name: data.name,
-            };
             if(typeof data.price === "undefined")
-                obj.price = "Немає в наявності";
+                var price = "Немає в наявності";
             else
-                obj.price = data.price;
-            res.send(obj);
+                var price = data.price;
+            var current = new Date();
+            var day = current.getDate();
+            var month = current.getMonth() + 1;
+            var year = current.getFullYear();
+            var hour = current.getHours();
+            var minute = current.getMinutes();
+            var date = day + '.' + month + '.' + year + ' ' + hour + ':' + minute;
+            var techno = new Parsed({
+                name: 'A-Техно',
+                item_name: data.name,
+                price: price,
+                time: date
+            });
+            res.send(techno);
+            // techno.save(function(err){
+            //     if(!err) {
+            //         res.send({next: true});
+            //     }
+            // });
         })
 };
 

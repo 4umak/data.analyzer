@@ -3,12 +3,10 @@ var Templates = require('./Templates');
 var $container = $('#products');
 
 $(function () {
-    var d = Date();
-    console.log(d.getHours());
     techno();
-    mobilluck();
-    //nobu();
-    officeman();
+    // mobilluck();
+    // nobu();
+    // officeman();
 });
 
 function showParsed(item) {
@@ -30,8 +28,8 @@ function techno() {
                         url: res.urls[i]
                     };
                     API.parseTechno(url, function (err, result) {
-                        if(err) console.log(err);
-                        console.log(result);
+                        // if(err) console.log(err);
+                        // console.log(result);
                         if (result !== undefined) showParsed(result);
                     });
                 }

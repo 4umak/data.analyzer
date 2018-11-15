@@ -66,19 +66,135 @@ exports.getUrls = function (req, res) {
 
 exports.parseTechno = function (req, res) {
     var url = req.body.url;
+
     osmosis
         .get(url)
         .set({'name':'h1', 'price': '#price'})
         .data(function (data) {
-            var obj = {
-                competitor: "A-Texно",
-                name: data.name,
-            };
+            var price;
             if(typeof data.price === "undefined")
-                obj.price = "Немає в наявності";
+                price = "Немає в наявності";
             else
-                obj.price = data.price;
-            res.send(obj);
+                price = data.price;
+            var current = new Date();
+            var day = current.getDate();
+            var month = current.getMonth() + 1;
+            var year = current.getFullYear();
+            var hour = current.getHours();
+            var minute = current.getMinutes();
+            var second = current.getSeconds();
+            var date = year + '-' + month + '-' + day + 'T' + hour + ':' + minute + ':' + second + 'Z';
+            var techno = new Parsed({
+                name: 'A-Техно',
+                item_name: data.name,
+                price: price,
+                time: date
+            });
+            techno.save(function(err){
+                if(!err) {
+                    console.log('success');
+                }
+            });
+        })
+};
+
+exports.parseNobu = function(req,res){
+    var url = req.body.url;
+
+    osmosis
+        .get(url)
+        .set({'name':'#pagetitle','price':'.price'})
+        .data(function (data) {
+            var price;
+            if(typeof data.price === "undefined")
+                price = "Немає в наявності";
+            else
+                price = data.price;
+            var current = new Date();
+            var day = current.getDate();
+            var month = current.getMonth() + 1;
+            var year = current.getFullYear();
+            var hour = current.getHours();
+            var minute = current.getMinutes();
+            var second = current.getSeconds();
+            var date = year + '-' + month + '-' + day + 'T' + hour + ':' + minute + ':' + second + 'Z';
+            var nobu = new Parsed({
+                name: 'Nobu',
+                item_name: data.name,
+                price: price,
+                time: date
+            });
+            nobu.save(function(err){
+                if(!err) {
+                    console.log('success');
+                }
+            });
+        })
+};
+
+exports.parseOfficeman = function(req,res){
+    var url = req.body.url;
+    osmosis
+        .get(url)
+        .set({'name':'h1','price':'.main'})
+        .data(function (data) {
+            var price;
+            if(typeof data.price === "undefined")
+                price = "Немає в наявності";
+            else
+                price = data.price;
+            var current = new Date();
+            var day = current.getDate();
+            var month = current.getMonth() + 1;
+            var year = current.getFullYear();
+            var hour = current.getHours();
+            var minute = current.getMinutes();
+            var second = current.getSeconds();
+            var date = year + '-' + month + '-' + day + 'T' + hour + ':' + minute + ':' + second + 'Z';
+            var officeman = new Parsed({
+                name: 'Officeman',
+                item_name: data.name,
+                price: price,
+                time: date
+            });
+            officeman.save(function(err){
+                if(!err) {
+                    console.log('success');
+                }
+            });
+        })
+};
+
+exports.parseMobilluck = function(req,res){
+    var url = req.body.url;
+    osmosis
+        .get(url)
+        .set({'name':'.mgood_title','price':'.price'})
+        .data(function (data) {
+            var price;
+            if(typeof data.price === "undefined")
+                price = "Немає в наявності";
+            else
+                price = data.price;
+            var current = new Date();
+            var day = current.getDate();
+            var month = current.getMonth() + 1;
+            var year = current.getFullYear();
+            var hour = current.getHours();
+            var minute = current.getMinutes();
+            var second = current.getSeconds();
+            var date = year + '-' + month + '-' + day + 'T' + hour + ':' + minute + ':' + second + 'Z';
+            var mobilluck = new Parsed({
+                name: 'Mobilluck',
+                item_name: data.name,
+                price: price,
+                time: date
+            });
+            mobilluck.save(function(err){
+                if(!err) {
+                    console.log('success');
+                }
+            });
         })
 };
 
@@ -98,7 +214,7 @@ exports.writeCompetitors = function (req, res) {
                 }
                 UrlsCompetitors.update(
                     {
-                       name: name
+                        name: name
                     },
                     {
                         urls: a
@@ -119,58 +235,4 @@ exports.writeCompetitors = function (req, res) {
             }
         }
     )
-};
-
-exports.parseNobu = function(req,res){
-    var url = req.body.url;
-    osmosis
-        .get(url)
-        .set({'name':'#pagetitle','price':'.price'})
-        .data(function (data) {
-            var obj = {
-                competitor : "Nobu",
-                name : data.name,
-            };
-            if(typeof data.price === "undefined")
-                obj.price = "Немає в наявності";
-            else
-                obj.price = data.price;
-            res.send(obj);
-        })
-};
-
-exports.parseOfficeman = function(req,res){
-    var url = req.body.url;
-    osmosis
-        .get(url)
-        .set({'name':'h1','price':'.main'})
-        .data(function (data) {
-            var obj = {
-                competitor : "Officeman",
-                name : data.name,
-            };
-            if(typeof data.price === "undefined")
-                obj.price = "Немає в наявності";
-            else
-                obj.price = data.price;
-            res.send(obj);
-        })
-};
-
-exports.parseMobilluck = function(req,res){
-    var url = req.body.url;
-    osmosis
-        .get(url)
-        .set({'name':'.mgood_title','price':'.price'})
-        .data(function (data) {
-            var obj = {
-                competitor : "Mobilluck",
-                name : data.name,
-            };
-            if(typeof data.price === "undefined")
-                obj.price = "Немає в наявності";
-            else
-                obj.price = data.price;
-            res.send(obj);
-        })
 };

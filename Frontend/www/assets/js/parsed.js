@@ -64,18 +64,18 @@ exports.parseOfficeman = function (url, callback) {
 
 var ejs = require('ejs');
 
-exports.oneItem = ejs.compile("<div class=\"row\">\r\n    <div class=\"one-item articul col-xs-1\"><%= item.id%></div>\r\n    <div class=\"one-item name col-xs-2\"><%= item.articul%></div>\r\n    <div class=\"one-item brand col-xs-4\"><%= item.name%></div>\r\n    <div class=\"one-item supplier col-xs-2\"><%= item.brand%></div>\r\n    <div class=\"one-item price col-xs-1\"><%= item.price%>$</div>\r\n    <div class=\"one-item action col-xs-2\"><button>Delete</button></div>\r\n</div>");
-exports.oneParsed = ejs.compile("<div class=\"row\">\r\n    <div class=\"one-item col-xs-2\"><%= new Date(Date.now()).toLocaleString()%></div>\r\n    <div class=\"one-item col-xs-2\"><%= item.competitor%></div>\r\n    <div class=\"one-item col-xs-6\"><%= item.name%></div>\r\n    <div class=\"one-item col-xs-2\"><%= item.price%></div>\r\n</div>");
+exports.oneItem = ejs.compile("<div class=\"row\">\r\n    <div class=\"one-item articul col-xs-1\"><%= item.id%></div>\r\n    <div class=\"one-item name col-xs-2\"><%= item.articul%></div>\r\n    <div class=\"one-item brand col-xs-4\"><%= item.name%></div>\r\n    <div class=\"one-item supplier col-xs-2\"><%= item.brand%></div>\r\n    <div class=\"one-item price col-xs-1\"><%= item.price%>$</div>\r\n    <div class=\"one-item action col-xs-2\"><button>Edit</button><button>Delete</button></div>\r\n</div>");
+exports.oneParsed = ejs.compile("<div class=\"row\">\r\n    <div class=\"one-item col-xs-2\"><%= item.time%></div>\r\n    <div class=\"one-item col-xs-2\"><%= item.name%></div>\r\n    <div class=\"one-item col-xs-6\"><%= item.item_name%></div>\r\n    <div class=\"one-item col-xs-2\"><%= item.price%></div>\r\n</div>");
 },{"ejs":5}],3:[function(require,module,exports){
 var API = require('./API');
 var Templates = require('./Templates');
 var $container = $('#products');
 
 $(function () {
-   // techno();
-   // mobilluck();
-    nobu();
-   // officeman();
+    techno();
+    // mobilluck();
+    // nobu();
+    // officeman();
 });
 
 function showParsed(item) {
@@ -97,8 +97,8 @@ function techno() {
                         url: res.urls[i]
                     };
                     API.parseTechno(url, function (err, result) {
-                        if(err) console.log(err);
-                        console.log(result);
+                        // if(err) console.log(err);
+                        // console.log(result);
                         if (result !== undefined) showParsed(result);
                     });
                 }

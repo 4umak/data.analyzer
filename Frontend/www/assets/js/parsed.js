@@ -64,8 +64,8 @@ exports.parseOfficeman = function (url, callback) {
 
 var ejs = require('ejs');
 
-exports.oneItem = ejs.compile("<div class=\"row\">\n    <div class=\"one-item articul col-xs-1\"><%= item.id%></div>\n    <div class=\"one-item name col-xs-2\"><%= item.articul%></div>\n    <div class=\"one-item brand col-xs-4\"><%= item.name%></div>\n    <div class=\"one-item supplier col-xs-2\"><%= item.brand%></div>\n    <div class=\"one-item price col-xs-1\"><%= item.price%>$</div>\n    <div class=\"one-item action col-xs-2\"><button>Edit</button><button>Delete</button></div>\n</div>");
-exports.oneParsed = ejs.compile("<div class=\"row\">\n    <div class=\"one-item col-xs-2\"><%= item.time%></div>\n    <div class=\"one-item col-xs-2\"><%= item.name%></div>\n    <div class=\"one-item col-xs-6\"><%= item.item_name%></div>\n    <div class=\"one-item col-xs-2\"><%= item.price%></div>\n</div>");
+exports.oneItem = ejs.compile("<div class=\"row\">\r\n    <div class=\"one-item articul col-xs-1\"><%= item.id%></div>\r\n    <div class=\"one-item name col-xs-2\"><%= item.articul%></div>\r\n    <div class=\"one-item brand col-xs-4\"><%= item.name%></div>\r\n    <div class=\"one-item supplier col-xs-2\"><%= item.brand%></div>\r\n    <div class=\"one-item price col-xs-1\"><%= item.price%>$</div>\r\n    <div class=\"one-item action col-xs-2\"><button>Edit</button><button>Delete</button></div>\r\n</div>");
+exports.oneParsed = ejs.compile("<div class=\"row\">\r\n    <div class=\"one-item col-xs-2\"><%= item.time%></div>\r\n    <div class=\"one-item col-xs-2\"><%= item.name%></div>\r\n    <div class=\"one-item col-xs-6\"><%= item.item_name%></div>\r\n    <div class=\"one-item col-xs-2\"><%= item.price%></div>\r\n</div>");
 },{"ejs":5}],3:[function(require,module,exports){
 var API = require('./API');
 var Templates = require('./Templates');
@@ -80,9 +80,9 @@ $(function () {
 
 function showParsed(item) {
     console.log("parsed!");
-    var html_code = Templates.oneParsed({item: item});
-    var $node = $(html_code);
-    $container.append($node);
+    //var html_code = Templates.oneParsed({item: item});
+    //var $node = $(html_code);
+   // $container.append($node);
 }
 
 function techno() {
@@ -92,21 +92,31 @@ function techno() {
     API.getUrls(name, function (err, res) {
         if (!err) {
             if (!res.empty) {
-                for (var i = 0; i < res.urls.length; i++) {
-                    var url = {
-                        url: res.urls[i]
-                    };
-                    API.parseTechno(url, function (err, result) {
-                        // if(err) console.log(err);
-                        // console.log(result);
-                        if (result !== undefined) showParsed(result);
-                    });
-                }
+                var i = 0;
+                var end = res.urls.length;
+                prstchn(res.urls, i, end);
             } else {
                 alert('Немає такого конкурента.');
             }
         }
     });
+}
+
+function prstchn(urls, i, end) {
+    if (i < end) {
+        var url = {
+            url: urls[i]
+        };
+        API.parseTechno(url, function (err, res) {
+            if (!err) {
+                if (res) {
+                    prstchn(urls, i++, end);
+                }
+            }
+        })
+    } else {
+        alert("Parsed All!");
+    }
 }
 
 function mobilluck() {

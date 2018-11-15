@@ -11,9 +11,9 @@ $(function () {
 
 function showParsed(item) {
     console.log("parsed!");
-    var html_code = Templates.oneParsed({item: item});
-    var $node = $(html_code);
-    $container.append($node);
+    //var html_code = Templates.oneParsed({item: item});
+    //var $node = $(html_code);
+   // $container.append($node);
 }
 
 function techno() {
@@ -23,21 +23,31 @@ function techno() {
     API.getUrls(name, function (err, res) {
         if (!err) {
             if (!res.empty) {
-                for (var i = 0; i < res.urls.length; i++) {
-                    var url = {
-                        url: res.urls[i]
-                    };
-                    API.parseTechno(url, function (err, result) {
-                        // if(err) console.log(err);
-                        // console.log(result);
-                        if (result !== undefined) showParsed(result);
-                    });
-                }
+                var i = 0;
+                var end = res.urls.length;
+                prstchn(res.urls, i, end);
             } else {
                 alert('Немає такого конкурента.');
             }
         }
     });
+}
+
+function prstchn(urls, i, end) {
+    if (i < end) {
+        var url = {
+            url: urls[i]
+        };
+        API.parseTechno(url, function (err, res) {
+            if (!err) {
+                if (res) {
+                    prstchn(urls, i++, end);
+                }
+            }
+        })
+    } else {
+        alert("Parsed All!");
+    }
 }
 
 function mobilluck() {

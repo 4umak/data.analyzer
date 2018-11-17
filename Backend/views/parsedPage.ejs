@@ -1,19 +1,17 @@
 <% include common/header.ejs%>
 <div class="top-panel">
     <div class="menu">
-        <span class="menu-item" id="goods"><a href="/">Goods</a></span>
-        <span class="menu-item" id="competitor"><a>Parsing</a></span>
-        <span class="menu-item" id="parse"><a href="urls.html">Parse URLS</a></span>
+        <span class="menu-item"><a href="/">Goods</a></span>
+        <span class="menu-item"><a href="parsed.html">Parsing</a></span>
+        <span class="menu-item"><a href="filters.html">Filters</a></span>
     </div>
 </div>
 <div class="add-container">
     <div class="row">
-        <div class="ad col-lg-5 col-md-5 col-sm-6">Competitor's Name:<input></div>
-        <div class="ad col-lg-4 col-md-4 col-sm-3"><input type="file" name="f" multiple
-                                                          accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
-        </div>
+        <div class="ad col-lg-5 col-md-5 col-sm-6">Competitor's Name:<input id="name"></div>
+        <div class="ad col-lg-4 col-md-4 col-sm-3"><input type="file" id="input-excel"></div>
         <div class="ad col-lg-3 col-md-3 col-sm-3">
-            <button type="button" id="add" class="btn btn-info">Add</button>
+            <button type="button" id="accept" class="btn btn-info">Add</button>
         </div>
     </div>
 </div>

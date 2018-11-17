@@ -1,0 +1,181 @@
+@topPanelHeight: 50px;
+body{
+  margin:0;
+  padding:0;
+}
+.class1 {
+  font-family: Arial;
+  color: darkcyan;
+}
+#name1 {
+  position: absolute;
+  top: 100px;
+  left: 30px;
+}
+
+.top-panel{
+  width: 100%;
+  height: @topPanelHeight;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom: solid 2px gainsboro;
+  overflow-y: hidden;
+}
+
+.menu{
+  width: 100%;
+  height: @topPanelHeight;
+  text-align: center;
+  line-height: @topPanelHeight;
+}
+
+.menu-item{
+  padding: 7px;
+  color: white;
+  border-radius: 10px;
+  background-color: lightblue;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.menu-item > a{
+  text-decoration: none;
+  color: white;
+}
+
+.menu-item:hover{
+  padding: 10px;
+  cursor: pointer;
+}
+
+#name2 {
+  position: absolute;
+  top: 150px;
+  left: 30px;
+}
+#name3 {
+  position: absolute;
+  top: 200px;
+  left: 30px;
+}
+
+
+#price_compare{
+  position: absolute;
+  top: 100px;
+  left: 250px;
+}
+
+#date1{
+  position: absolute;
+  top: 200px;
+  left: 250px;
+}
+
+#date2{
+  position: absolute;
+  top: 200px;
+  left: 500px;
+
+}
+
+#name1_input{
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 100px;
+}
+#date1_input{
+  position: absolute;
+  top: 200px;
+  left: 320px;
+  width: 130px;
+
+}
+
+#date2_input{
+  position: absolute;
+  top: 200px;
+  left: 580px;
+  width: 130px;
+
+}
+
+#name2_input{
+  position: absolute;
+  top: 150px;
+  left: 100px;
+  width: 100px;
+
+}
+
+#name3_input{
+  position: absolute;
+  top: 200px;
+  left: 100px;
+  width: 100px;
+}
+
+#pc_input{
+  position: absolute;
+  top: 100px;
+  left: 400px;
+  width: 50px;
+
+}
+
+
+
+#searchByPrice {
+  position: absolute;
+  top: 100px;
+  left: 800px;
+  width: 75px;
+  background-color: aqua;
+}
+#searchByItem {
+  position: absolute;
+  top: 150px;
+  left: 800px;
+  width: 75px;
+  background-color: aqua;
+}
+
+
+#searchByPeriod {
+  position: absolute;
+  top: 200px;
+  left: 800px;
+  width: 75px;
+  background-color: aqua;
+}
+
+.main-menu{
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.main-menu__item{
+  background-color: lightblue;
+  padding: 10px 15px;
+  margin: 10px 10px;
+  border-radius: 5px;
+}
+
+.main-menu__link{
+  text-decoration: none;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+}
+
+.menu-main__link:hover{
+  color: white;
+  text-decoration: none;
+}

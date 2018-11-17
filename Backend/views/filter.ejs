@@ -1,21 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Filter</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet/less" type="text/css" href="assets/less/filter.less" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
-</head>
-<body>
-<header>
-    <ul class="main-menu">
-        <li class="main-menu__item"><a class="main-menu__link">Competitor: Prorab</a></li>
-        <li class="main-menu__item"><a class="main-menu__link" href="#">goods</a></li>
-        <li class="main-menu__item"><a class="main-menu__link" href="#">parsing</a></li>
-        <li class="main-menu__item"><a class="main-menu__link" href="#">parse urls</a></li>
-    </ul>
-</header>
+<% include common/header.ejs %>
+<div class="top-panel">
+    <div class="menu">
+        <span class="menu-item">Competitor name</span>
+        <span class="menu-item"><a href="/">Goods</a></span>
+        <span class="menu-item"><a href="parsed.html">Parsing</a></span>
+        <span class="menu-item"><a href="urls.html">Parse Urls</a></span>
+    </div>
+</div>
 <div class = "class1">
     <a id = "name1">Name</a>
     <input type = text id = "name1_input">
@@ -40,5 +31,4 @@
         <button id="searchByPeriod">Search</button>
     </div>
 </div>
-</body>
-</html>
+<% include common/footer.ejs %>

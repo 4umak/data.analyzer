@@ -21,3 +21,19 @@ exports.parsedUrls = function (req, res) {
       js: 'urls'
   })
 };
+
+exports.competitor = function (req,res) {
+    res.render('competitor',{
+        pageTitle: 'Data Analyzer',
+        less: 'competitors',
+        js: ''
+    })
+};
+
+exports.filter= function (req, res) {
+    res.render('filter', {
+        pageTitle: 'Data Analyzer',
+        less: 'filter',
+        js: ''
+    })
+};

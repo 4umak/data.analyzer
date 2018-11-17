@@ -1,12 +1,14 @@
 var API = require('./API');
 var Templates = require('./Templates');
 var $container = $('#products');
+var $name = $('#name');
 
 $(function () {
-    techno();
-    // mobilluck();
-    // nobu();
-    // officeman();
+    readExcel();
+    var competitor_name = {
+        name: 'techno'
+    };
+    // getUrls(competitor_name)
 });
 
 function showParsed(item) {
@@ -16,16 +18,62 @@ function showParsed(item) {
    // $container.append($node);
 }
 
-function techno() {
-    var name = {
-        name: 'techno'
-    };
+function parse(urls, i, end, competitor) {
+    if (i < end) {
+        var url = {
+            url: urls[i]
+        };
+        console.log(competitor);
+        switch (competitor) {
+            case 'techno':
+                API.parseTechno(url, function (err, res) {
+                    if (!err) {
+                        if (res.next) {
+                            parse(urls, i++, end, competitor);
+                        }
+                    }
+                });
+                break;
+            case 'mobilluck':
+                API.parseMobilluck(url, function (err, res) {
+                    if (!err) {
+                        if (res.next) {
+                            parse(urls, i++, end, competitor);
+                        }
+                    }
+                });
+                break;
+            case 'nobu':
+                API.parseNobu(url, function (err, res) {
+                    if (!err) {
+                        if (res.next) {
+                            parse(urls, i++, end, competitor);
+                        }
+                    }
+                });
+                break;
+            case 'officeman':
+                API.parseOfficeman(url, function (err, res) {
+                    if (!err) {
+                        if (res.next) {
+                            parse(urls, i++, end, competitor);
+                        }
+                    }
+                });
+                break;
+        }
+    } else {
+        alert("Parsed All!");
+    }
+}
+
+function getUrls(name) {
     API.getUrls(name, function (err, res) {
         if (!err) {
             if (!res.empty) {
                 var i = 0;
                 var end = res.urls.length;
-                prstchn(res.urls, i, end);
+                parse(res.urls, i, end, name.name);
             } else {
                 alert('Немає такого конкурента.');
             }
@@ -33,91 +81,61 @@ function techno() {
     });
 }
 
-function prstchn(urls, i, end) {
-    if (i < end) {
-        var url = {
-            url: urls[i]
-        };
-        API.parseTechno(url, function (err, res) {
-            if (!err) {
-                if (res) {
-                    prstchn(urls, i++, end);
-                }
-            }
-        })
-    } else {
-        alert("Parsed All!");
+function readExcel() {
+    var oFileIn = document.getElementById('input-excel');
+    if(oFileIn.addEventListener) {
+        oFileIn.addEventListener('change', filePicked, false);
     }
 }
 
-function mobilluck() {
-    var name = {
-        name: 'mobilluck'
-    };
-    API.getUrls(name, function (err, res) {
-        if(!err) {
-            if(!res.empty) {
-                for (var i = 0; i < res.urls.length; i++) {
-                    var url = {
-                        url: res.urls[i]
+function filePicked(oEvent) {
+    var oFile = oEvent.target.files[0];
+    var reader = new FileReader();
+    reader.onload = function (e) {
+        var data = e.target.result;
+        var cfb = XLS.CFB.read(data, {type: 'binary'});
+        var wb = XLS.parse_xlscfb(cfb);
+        wb.SheetNames.forEach(function (sheetName) {
+            var oJS = XLS.utils.sheet_to_row_object_array(wb.Sheets[sheetName]);
+            $('#accept').click(function () {
+                var name = $name.val();
+                if (name !== "") {
+                    var arr = [];
+                    for (var i = 0; i < oJS.length; i++) {
+                        for(var k in oJS[i]) {
+                            if (k === name) {
+                                var a = oJS[i];
+                                arr.push(a[k]);
+                            }
+                        }
+                    }
+                    var item = {
+                        name: name,
+                        urls: arr
                     };
-                    API.parseMobilluck(url, function (err, result) {
-                        if(err) console.log(err);
-                        console.log(result);
-                        if (result !== undefined) showParsed(result);
-                    });
+                    if (arr.length === 0) {
+                        alert('Такого конкурента не знайдено в таблиці!')
+                    } else {
+                        API.parseUrls(item, function (err, res) {
+                            if (!err) {
+                                if (res.success) {
+                                    alert('Посилання на конкурента ' + item.name + ' створено!');
+                                    $name.val('');
+                                    $('#input-excel').val('');
+                                }
+                                if (res.added) {
+                                    alert('Посилання до існуючого конкурента ' + item.name + ' добавлені!');
+                                    $name.val('');
+                                    $('#input-excel').val('');
+                                }
+                            }
+                        });
+                    }
+                } else {
+                    alert('Введіть конкурента.');
                 }
-            } else {
-                alert('Немає такого конкурента.');
-            }
-        }
-    })
-}
-
-function nobu() {
-    var name = {
-        name: 'nobu'
+            });
+        });
     };
-    API.getUrls(name, function (err, res) {
-        if(!err) {
-            if (!res.empty) {
-                for (var i = 0; i < res.urls.length; i++) {
-                    var url = {
-                        url: res.urls[i]
-                    };
-                    API.parseNobu(url, function (err, result) {
-                        if(err) console.log(err);
-                        console.log(result);
-                        if (result !== undefined) showParsed(result);
-                    });
-                }
-            } else {
-                alert('Немає такого конкурента.');
-            }
-        }
-    })
-}
-
-function officeman() {
-    var name = {
-        name: 'officeman'
-    };
-    API.getUrls(name, function (err, res) {
-        if(!err) {
-            if (!res.empty) {
-                for (var i = 0; i < res.urls.length; i++) {
-                    var url = {
-                        url: res.urls[i]
-                    };
-                    API.parseOfficeman(url, function (err, result) {
-                        if(err) console.log(err);
-                        console.log(result);
-                        if (result !== undefined) showParsed(result);
-                    });
-                }
-            } else {
-                alert('Немає такого конкурента.');
-            }
-        }
-    })
+    reader.readAsBinaryString(oFile);
 }

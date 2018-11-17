@@ -92,7 +92,7 @@ exports.parseTechno = function (req, res) {
             });
             techno.save(function(err){
                 if(!err) {
-                    console.log('successed save ' + Date(Date.now()));
+                    console.log('success saved');
                     res.send({next:true});
                 }
             });
@@ -127,7 +127,7 @@ exports.parseNobu = function(req,res){
             });
             nobu.save(function(err){
                 if(!err) {
-                    console.log('successed save ' + Date(Date.now()));
+                    console.log('success saved');
                     res.send({next:true});
                 }
             });
@@ -161,7 +161,7 @@ exports.parseOfficeman = function(req,res){
             });
             officeman.save(function(err){
                 if(!err) {
-                    console.log('successed save ' + Date(Date.now()));
+                    console.log('success saved');
                     res.send({next:true});
                 }
             });
@@ -195,7 +195,7 @@ exports.parseMobilluck = function(req,res){
             });
             mobilluck.save(function(err){
                 if(!err) {
-                    console.log('successed save ' + Date(Date.now()));
+                    console.log('success saved');
                     res.send({next:true});
                 }
             });
@@ -214,7 +214,7 @@ exports.writeCompetitors = function (req, res) {
             if (competitor) {
                 var a = competitor.urls;
                 for (var i = 0; i < urls.length; i++) {
-                    a.push(urls[i]);
+                    if (a.indexOf(urls[i]) === -1) a.push(urls[i]);
                 }
                 UrlsCompetitors.update(
                     {
@@ -225,7 +225,7 @@ exports.writeCompetitors = function (req, res) {
                     },
                     function () {}
                 );
-                res.send({success: true});
+                res.send({added: true});
             } else {
                 var one_competitor = new UrlsCompetitors({
                     name: name,

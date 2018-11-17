@@ -14,10 +14,10 @@ exports.parsedPage = function (req, res) {
   })
 };
 
-exports.parsedUrls = function (req, res) {
-  res.render('parsedUrls', {
+exports.filtersPage = function (req, res) {
+  res.render('filtersPage', {
       pageTitle: 'Data Analyzer',
-      less: 'urls',
-      js: 'urls'
+      less: 'filters',
+      js: 'filters'
   })
 };

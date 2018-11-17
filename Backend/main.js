@@ -19,7 +19,7 @@ function configureEndpoints(app) {
 
     app.get('/', pages.mainPage);
     app.get('/parsed.html', pages.parsedPage);
-    app.get('/urls.html', pages.parsedUrls);
+    app.get('/filters.html', pages.filtersPage);
 
     app.use(express.static(path.join(__dirname, '../Frontend/www')));
 }

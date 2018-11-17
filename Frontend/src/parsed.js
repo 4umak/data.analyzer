@@ -1,10 +1,13 @@
 var API = require('./API');
 var Templates = require('./Templates');
+var Storage = require('./LocalStorage.js');
 var $container = $('#products');
+var $competitors = $('#competitors');
 var $name = $('#name');
 
 $(function () {
     readExcel();
+    showCompetitors();
     var competitor_name = {
         name: 'techno'
     };
@@ -12,10 +15,28 @@ $(function () {
 });
 
 function showParsed(item) {
-    console.log("parsed!");
     //var html_code = Templates.oneParsed({item: item});
     //var $node = $(html_code);
    // $container.append($node);
+}
+
+function showCompetitors() {
+    API.showCompetitors(function (err, res) {
+        if (!err) {
+            res.forEach(function (one) {
+               var html_code = Templates.competitorName({competitor: one});
+               var $node = $(html_code);
+
+               $node.find('.competitor-name').click(function () {
+                   var name = this.id;
+                   Storage.set('name', name);
+                   document.location.href = '/competitor.html'
+               });
+
+               $competitors.append($node);
+            });
+        }
+    })
 }
 
 function parse(urls, i, end, competitor) {

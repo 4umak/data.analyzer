@@ -2,6 +2,8 @@
   "name": "data.analyzer",
   "version": "1.0.0",
   "dependencies": {
+    "basil": "0.0.5",
+    "basil.js": "^0.4.10",
     "body-parser": "^1.18.3",
     "brfs": "^2.0.1",
     "cheerio": "^1.0.0-rc.2",

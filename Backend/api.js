@@ -48,6 +48,13 @@ exports.showGoods = function (req, res) {
     })
 };
 
+exports.showCompetitors = function (req, res) {
+    UrlsCompetitors.find(function (err, result) {
+        if (err) throw err;
+        res.send(result);
+    })
+};
+
 exports.getUrls = function (req, res) {
     var name = req.body.name;
     UrlsCompetitors.findOne(

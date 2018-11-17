@@ -14,19 +14,11 @@ exports.parsedPage = function (req, res) {
   })
 };
 
-exports.filtersPage = function (req, res) {
-  res.render('filtersPage', {
-      pageTitle: 'Data Analyzer',
-      less: 'filters',
-      js: 'filters'
-  })
-};
-
 exports.competitor = function (req,res) {
     res.render('competitor',{
         pageTitle: 'Data Analyzer',
         less: 'competitors',
-        js: ''
+        js: 'competitor'
     })
 };
 
@@ -34,6 +26,6 @@ exports.filter = function (req, res) {
     res.render('filter', {
         pageTitle: 'Data Analyzer',
         less: 'filter',
-        js: ''
+        js: 'filters'
     })
 };

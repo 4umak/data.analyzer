@@ -8,6 +8,7 @@ function configureEndpoints(app) {
     var api = require('./api');
 
     app.get('/api/getGoods/', api.showGoods);
+    app.get('/api/getCompetitors/', api.showCompetitors);
 
     app.post('/api/writeGoods/', api.writeGoods);
     app.post('/api/getUrls/', api.getUrls);
@@ -19,9 +20,8 @@ function configureEndpoints(app) {
 
     app.get('/', pages.mainPage);
     app.get('/parsed.html', pages.parsedPage);
-    app.get('/urls.html', pages.filter);
-    app.get('/competitors.html', pages.competitor);
-   app.get('/filter.html', pages.filter);
+    app.get('/competitor.html', pages.competitor);
+    app.get('/filter.html', pages.filter);
     app.use(express.static(path.join(__dirname, '../Frontend/www')));
 }
 

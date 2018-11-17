@@ -18,9 +18,13 @@ module.exports = function(grunt) {
                 src: 'Frontend/src/parsed.js',
                 dest: 'Frontend/www/assets/js/parsed.js'
             },
-            urls: {
-                src: 'Frontend/src/urls.js',
-                dest: 'Frontend/www/assets/js/urls.js'
+            filters: {
+                src: 'Frontend/src/filters.js',
+                dest: 'Frontend/www/assets/js/filters.js'
+            },
+            competitor: {
+                src: 'Frontend/src/competitor.js',
+                dest: 'Frontend/www/assets/js/competitor.js'
             }
         }
     };
@@ -34,7 +38,8 @@ module.exports = function(grunt) {
             tasks: [
                 'browserify:main',
                 'browserify:parsed',
-                'browserify:urls'
+                'browserify:filters',
+                'browserify:competitor'
             ]
         }
     };
@@ -49,7 +54,8 @@ module.exports = function(grunt) {
         [
             'browserify:main',
             'browserify:parsed',
-            'browserify:urls'
+            'browserify:filters',
+            'browserify:competitor'
         ]
     );
 

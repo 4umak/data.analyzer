@@ -37,6 +37,10 @@ exports.showGoods = function (callback) {
     backendGet('/api/getGoods/', callback);
 };
 
+exports.showCompetitors = function(callback) {
+  backendGet('/api/getCompetitors/', callback);
+};
+
 exports.getUrls = function (name, callback) {
     backendPost('/api/getUrls/', name, callback);
 };
@@ -66,14 +70,17 @@ var ejs = require('ejs');
 
 exports.oneItem = ejs.compile("<div class=\"row\">\n    <div class=\"one-item articul col-xs-1\"><%= item.id%></div>\n    <div class=\"one-item name col-xs-2\"><%= item.articul%></div>\n    <div class=\"one-item brand col-xs-4\"><%= item.name%></div>\n    <div class=\"one-item supplier col-xs-2\"><%= item.brand%></div>\n    <div class=\"one-item price col-xs-1\"><%= item.price%>$</div>\n    <div class=\"one-item action col-xs-2\"><button>Edit</button><button>Delete</button></div>\n</div>");
 exports.oneParsed = ejs.compile("<div class=\"row\">\n    <div class=\"one-item col-xs-2\"><%= item.time%></div>\n    <div class=\"one-item col-xs-2\"><%= item.name%></div>\n    <div class=\"one-item col-xs-6\"><%= item.item_name%></div>\n    <div class=\"one-item col-xs-2\"><%= item.price%></div>\n</div>");
+exports.competitorName = ejs.compile("<div class=\"nm col-md-12\"><a><%= competitor.name%></a></div>");
 },{"ejs":5}],3:[function(require,module,exports){
 var API = require('./API');
 var Templates = require('./Templates');
 var $container = $('#products');
+var $competitors = $('#competitors');
 var $name = $('#name');
 
 $(function () {
     readExcel();
+    showCompetitors();
     var competitor_name = {
         name: 'techno'
     };
@@ -81,10 +88,21 @@ $(function () {
 });
 
 function showParsed(item) {
-    console.log("parsed!");
     //var html_code = Templates.oneParsed({item: item});
     //var $node = $(html_code);
    // $container.append($node);
+}
+
+function showCompetitors() {
+    API.showCompetitors(function (err, res) {
+        if (!err) {
+            res.forEach(function (one) {
+               var html_code = Templates.competitorName({competitor: one});
+               var $node = $(html_code);
+               $competitors.append($node);
+            });
+        }
+    })
 }
 
 function parse(urls, i, end, competitor) {

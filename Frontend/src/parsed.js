@@ -1,10 +1,12 @@
 var API = require('./API');
 var Templates = require('./Templates');
 var $container = $('#products');
+var $competitors = $('#competitors');
 var $name = $('#name');
 
 $(function () {
     readExcel();
+    showCompetitors();
     var competitor_name = {
         name: 'techno'
     };
@@ -12,10 +14,21 @@ $(function () {
 });
 
 function showParsed(item) {
-    console.log("parsed!");
     //var html_code = Templates.oneParsed({item: item});
     //var $node = $(html_code);
    // $container.append($node);
+}
+
+function showCompetitors() {
+    API.showCompetitors(function (err, res) {
+        if (!err) {
+            res.forEach(function (one) {
+               var html_code = Templates.competitorName({competitor: one});
+               var $node = $(html_code);
+               $competitors.append($node);
+            });
+        }
+    })
 }
 
 function parse(urls, i, end, competitor) {

@@ -36,6 +36,10 @@ exports.showGoods = function (callback) {
     backendGet('/api/getGoods/', callback);
 };
 
+exports.showCompetitors = function(callback) {
+  backendGet('/api/getCompetitors/', callback);
+};
+
 exports.getUrls = function (name, callback) {
     backendPost('/api/getUrls/', name, callback);
 };

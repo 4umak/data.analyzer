@@ -8,6 +8,7 @@ function configureEndpoints(app) {
     var api = require('./api');
 
     app.get('/api/getGoods/', api.showGoods);
+    app.get('/api/getCompetitors/', api.showCompetitors);
 
     app.post('/api/writeGoods/', api.writeGoods);
     app.post('/api/getUrls/', api.getUrls);

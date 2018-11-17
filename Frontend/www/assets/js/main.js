@@ -37,6 +37,10 @@ exports.showGoods = function (callback) {
     backendGet('/api/getGoods/', callback);
 };
 
+exports.showCompetitors = function(callback) {
+  backendGet('/api/getCompetitors/', callback);
+};
+
 exports.getUrls = function (name, callback) {
     backendPost('/api/getUrls/', name, callback);
 };
@@ -66,8 +70,8 @@ var ejs = require('ejs');
 
 exports.oneItem = ejs.compile("<div class=\"row\">\n    <div class=\"one-item articul col-xs-1\"><%= item.id%></div>\n    <div class=\"one-item name col-xs-2\"><%= item.articul%></div>\n    <div class=\"one-item brand col-xs-4\"><%= item.name%></div>\n    <div class=\"one-item supplier col-xs-2\"><%= item.brand%></div>\n    <div class=\"one-item price col-xs-1\"><%= item.price%>$</div>\n    <div class=\"one-item action col-xs-2\"><button>Edit</button><button>Delete</button></div>\n</div>");
 exports.oneParsed = ejs.compile("<div class=\"row\">\n    <div class=\"one-item col-xs-2\"><%= item.time%></div>\n    <div class=\"one-item col-xs-2\"><%= item.name%></div>\n    <div class=\"one-item col-xs-6\"><%= item.item_name%></div>\n    <div class=\"one-item col-xs-2\"><%= item.price%></div>\n</div>");
+exports.competitorName = ejs.compile("<div class=\"nm col-md-12\"><a><%= competitor.name%></a></div>");
 },{"ejs":5}],3:[function(require,module,exports){
-// var parse = require('./parserExcel.js');
 var API = require('./API');
 var Templates = require('./Templates');
 
@@ -171,7 +175,7 @@ function filePicked(oEvent) {
                 oJS.forEach(function (one) {
                     API.writeGoods(one, function (err, res) {
                         if (!err) {
-                            if(res.isExist || res.newItem) {
+                            if(res.newItem) {
                                 addLast(one);
                             }
                         }

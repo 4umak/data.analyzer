@@ -1,4 +1,3 @@
-// var parse = require('./parserExcel.js');
 var API = require('./API');
 var Templates = require('./Templates');
 
@@ -102,7 +101,7 @@ function filePicked(oEvent) {
                 oJS.forEach(function (one) {
                     API.writeGoods(one, function (err, res) {
                         if (!err) {
-                            if(res.isExist || res.newItem) {
+                            if(res.newItem) {
                                 addLast(one);
                             }
                         }

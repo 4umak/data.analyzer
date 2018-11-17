@@ -4,6 +4,7 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "brfs": "^2.0.1",
+    "cheerio": "^1.0.0-rc.2",
     "ejs": "^2.6.1",
     "exceljs": "^1.6.2",
     "export": "^0.1.337",
@@ -21,6 +22,7 @@
     "osmosis": "^1.1.8",
     "parse5": "^5.1.0",
     "path": "^0.12.7",
+    "request": "^2.88.0",
     "require": "^2.4.20",
     "xlsx": "^0.14.0",
     "xml2js": "^0.4.19"

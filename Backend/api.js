@@ -93,6 +93,7 @@ exports.parseTechno = function (req, res) {
             techno.save(function(err){
                 if(!err) {
                     console.log('success');
+                    res.send({next: true})
                 }
             });
         })

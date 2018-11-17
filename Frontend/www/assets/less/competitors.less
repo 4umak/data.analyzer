@@ -1,3 +1,4 @@
+@topPanelHeight: 50px;
 *{
     box-sizing: border-box;
 }
@@ -11,6 +12,44 @@ html{
 header{
     max-width: 1080px;
     margin: 0 auto;
+}
+
+.top-panel{
+  width: 100%;
+  height: @topPanelHeight;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom: solid 2px gainsboro;
+  overflow-y: hidden;
+}
+
+.menu{
+  width: 100%;
+  height: @topPanelHeight;
+  text-align: center;
+  line-height: @topPanelHeight;
+}
+
+.menu-item{
+    padding: 7px;
+    color: white;
+    border-radius: 10px;
+    background-color: lightblue;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.menu-item > a{
+    text-decoration: none;
+    color: white;
+}
+
+.menu-item:hover{
+    padding: 10px;
+    cursor: pointer;
 }
 
 .main-menu{
@@ -43,9 +82,8 @@ header{
 
 
 .products-table{
-    border: 2px solid #bdbdbd;
-    display: flex;
-    flex-direction: column;
+
+    padding-top: @topPanelHeight;
 }
 
 .table-row{

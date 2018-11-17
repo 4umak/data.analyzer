@@ -1,5 +1,6 @@
 var API = require('./API');
 var Templates = require('./Templates');
+var Storage = require('./LocalStorage.js');
 var $container = $('#products');
 var $competitors = $('#competitors');
 var $name = $('#name');
@@ -25,6 +26,13 @@ function showCompetitors() {
             res.forEach(function (one) {
                var html_code = Templates.competitorName({competitor: one});
                var $node = $(html_code);
+
+               $node.find('.competitor-name').click(function () {
+                   var name = this.id;
+                   Storage.set('name', name);
+                   document.location.href = '/competitor.html'
+               });
+
                $competitors.append($node);
             });
         }

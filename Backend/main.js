@@ -20,7 +20,7 @@ function configureEndpoints(app) {
 
     app.get('/', pages.mainPage);
     app.get('/parsed.html', pages.parsedPage);
-    app.get('/competitors.html', pages.competitor);
+    app.get('/competitor.html', pages.competitor);
     app.get('/filter.html', pages.filter);
     app.use(express.static(path.join(__dirname, '../Frontend/www')));
 }

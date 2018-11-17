@@ -18,7 +18,7 @@ exports.competitor = function (req,res) {
     res.render('competitor',{
         pageTitle: 'Data Analyzer',
         less: 'competitors',
-        js: ''
+        js: 'competitor'
     })
 };
 

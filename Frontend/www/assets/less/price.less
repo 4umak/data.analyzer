@@ -1,0 +1,90 @@
+@topPanelHeight: 50px;
+@oneRowHeight: 40px;
+
+*{
+  box-sizing: border-box;
+}
+
+body, .row{
+    margin:0;
+    padding:0;
+}
+
+.top-panel{
+    width: 100%;
+    height: @topPanelHeight;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: solid 2px gainsboro;
+    overflow-y: hidden;
+}
+.menu{
+    width: 100%;
+    height: @topPanelHeight;
+    text-align: center;
+    line-height: @topPanelHeight;
+}
+.menu-item{
+    padding: 7px;
+    color: white;
+    border-radius: 10px;
+    background-color: lightblue;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.menu-item > a{
+  color: white;
+}
+
+.menu-item:hover{
+  padding: 10px;
+  cursor: pointer;
+}
+.main-container{
+    margin-top:@topPanelHeight;
+    //border:3px;
+}
+.goods-container,.comp-container{
+    border-bottom: solid 2px gainsboro;
+    height:100px;
+    border-left: solid 2px gainsboro;
+    margin:0;
+    padding:0;
+}
+.goods, .column1{
+    border-right: solid 2px gainsboro;
+    height: 100%;
+    width: 100%;
+    margin:0;
+    padding:0;
+}
+.row-comp{
+    border-top: solid 2px gainsboro;
+    height: 60%;
+    width: 100%;
+}
+.goods, .goods-container > .row{
+    height: 100%;
+}
+
+.ad,.md{
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: @oneRowHeight;
+    overflow-y: hidden;
+}
+
+
+
+
+    
+
+    
+
+
+

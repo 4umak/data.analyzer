@@ -11,9 +11,9 @@ $(function () {
 
 function showParsed(item) {
     console.log("parsed!");
-    var html_code = Templates.oneParsed({item: item});
-    var $node = $(html_code);
-    $container.append($node);
+    //var html_code = Templates.oneParsed({item: item});
+    //var $node = $(html_code);
+   // $container.append($node);
 }
 
 function techno() {

@@ -92,8 +92,8 @@ exports.parseTechno = function (req, res) {
             });
             techno.save(function(err){
                 if(!err) {
-                    console.log('success');
-                    res.send({next: true})
+                    console.log('successed save ' + Date(Date.now()));
+                    res.send({next:true});
                 }
             });
         })
@@ -127,7 +127,8 @@ exports.parseNobu = function(req,res){
             });
             nobu.save(function(err){
                 if(!err) {
-                    console.log('success');
+                    console.log('successed save ' + Date(Date.now()));
+                    res.send({next:true});
                 }
             });
         })
@@ -160,7 +161,8 @@ exports.parseOfficeman = function(req,res){
             });
             officeman.save(function(err){
                 if(!err) {
-                    console.log('success');
+                    console.log('successed save ' + Date(Date.now()));
+                    res.send({next:true});
                 }
             });
         })
@@ -193,7 +195,8 @@ exports.parseMobilluck = function(req,res){
             });
             mobilluck.save(function(err){
                 if(!err) {
-                    console.log('success');
+                    console.log('successed save ' + Date(Date.now()));
+                    res.send({next:true});
                 }
             });
         })

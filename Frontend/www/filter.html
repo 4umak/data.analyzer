@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Filter</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+        }
+        .class1 {
+            font-family: Arial;
+            color: darkcyan;
+        }
+        #name1 {
+            position: absolute;
+            top: 100px;
+            left: 30px;
+        }
+        #name2 {
+            position: absolute;
+            top: 150px;
+            left: 30px;
+        }
+        #name3 {
+            position: absolute;
+            top: 200px;
+            left: 30px;
+        }
+
+
+        #price_compare{
+            position: absolute;
+            top: 100px;
+            left: 250px;
+        }
+
+        #date1{
+            position: absolute;
+            top: 200px;
+            left: 250px;
+        }
+
+        #date2{
+            position: absolute;
+            top: 200px;
+            left: 500px;
+
+        }
+
+        #name1_input{
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            width: 100px;
+        }
+        #date1_input{
+            position: absolute;
+            top: 200px;
+            left: 320px;
+            width: 130px;
+
+        }
+
+        #date2_input{
+            position: absolute;
+            top: 200px;
+            left: 580px;
+            width: 130px;
+
+        }
+
+        #name2_input{
+            position: absolute;
+            top: 150px;
+            left: 100px;
+            width: 100px;
+
+        }
+
+        #name3_input{
+            position: absolute;
+            top: 200px;
+            left: 100px;
+            width: 100px;
+        }
+
+        #pc_input{
+            position: absolute;
+            top: 100px;
+            left: 400px;
+            width: 50px;
+
+        }
+
+
+
+        #but1 {
+            position: absolute;
+            top: 100px;
+            left: 800px;
+            width: 75px;
+            background-color: aqua;
+        }
+        #but2 {
+            position: absolute;
+            top: 150px;
+            left: 800px;
+            width: 75px;
+            background-color: aqua;
+        }
+
+
+        #but3 {
+            position: absolute;
+            top: 200px;
+            left: 800px;
+            width: 75px;
+            background-color: aqua;
+        }
+
+        .main-menu{
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .main-menu__item{
+            background-color: lightblue;
+            padding: 10px 15px;
+            margin: 10px 10px;
+            border-radius: 5px;
+        }
+
+        .main-menu__link{
+            text-decoration: none;
+            font-size: 2rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: white;
+        }
+
+        .menu-main__link:hover{
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+
+
+</head>
+<body>
+<header>
+    <ul class="main-menu">
+        <li class="main-menu__item"><a class="main-menu__link">Competitor: Prorab</a></li>
+        <li class="main-menu__item"><a class="main-menu__link" href="#">goods</a></li>
+        <li class="main-menu__item"><a class="main-menu__link" href="#">parsing</a></li>
+        <li class="main-menu__item"><a class="main-menu__link" href="#">parse urls</a></li>
+    </ul>
+</header>
+<div class = "class1">
+    <a id = "name1"> Ім'я </a>
+    <input type = text id = "name1_input">
+    <a id = "name2"> Ім'я </a>
+    <input type = text id = "name2_input">
+    <a id = "name3">Ім'я</a>
+    <input type = text id = "name3_input">
+    <a id = "price_compare">Порівняння ціни</a>
+    <select id = "pc_input">
+        <option value="more"> > </option>
+        <option value="less"> < </option>
+        <option value="moreEqual"> >= </option>
+        <option value="lessEqual"> <= </option>
+    </select>
+    <a id = "date1">Дата 1</a>
+    <input type = date id = "date1_input">
+    <a id = "date2">Дата 2</a>
+    <input type = date id = "date2_input">
+    <div class = "buttons">
+        <button id="but1">Пошук</button>
+        <button id="but2">Пошук</button>
+        <button id="but3">Пошук</button>
+        <button id="but3">Пошук</button>
+
+    </div>
+</div>
+</body>
+</html>

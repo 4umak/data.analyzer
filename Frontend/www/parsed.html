@@ -3,35 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>DataAnalyzer</title>
-    <link rel="stylesheet/less" type="text/css" href="assets/less/parsed.less" />
+    <link rel="stylesheet/less" type="text/css" href="assets/less/parsed.less"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
 </head>
 <body>
-    <div class="top-panel">
-        <div class="menu">
-            <span class="menu-item" id="see-products"><a>Parsing</a></span>
+<div class="top-panel">
+    <div class="menu">
+        <span class="menu-item" id="goods"><a>Goods</a></span>
+        <span class="menu-item" id="competitor"><a>Parsing</a></span>
+        <span class="menu-item" id="parse"><a>Parse URLS</a></span>
+    </div>
+</div>
+<div class="add-container">
+    <div class="row">
+        <div class="ad col-lg-5 col-md-5 col-sm-6">Competitor's Name:<input></div>
+        <div class="ad col-lg-4 col-md-4 col-sm-3"><input type="file" name="f" multiple
+                                                          accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+        </div>
+        <div class="ad col-lg-3 col-md-3 col-sm-3">
+            <button type="button" id="add" class="btn btn-info">Add</button>
         </div>
     </div>
-    <div class = "container">
-        <div class="row">
-            <div class="ad col-md-2">Date-time<input></div>
-            <div class="ad col-md-2">Competitor's Name<input></div>
-            <div class="ad col-md-2">Product name<input></div>
-            <div class="ad col-md-2">Price<input></div>
-             <div class="dropdown col-md-2">
-                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Competitors
-                     <span class="caret"></span></button>
-                 <ul class="dropdown-menu">
-                     <li><a href="#">www.mobilluck.com.ua</a></li>
-                     <div class="dropdown-divider"></div>
-                     <li><a href="#">a-techno.com.ua</a></li>
-                         <div class="dropdown-divider"></div>
-                     <li><a href="#">nobu.com.ua</a></li>
-                     <div class="dropdown-divider"></div>
-                     <li><a href="#">officeman.ua</a></li>
-                 </ul>
-            </div>
-            <button type="button" class="btn btn-info col-md-2">Parse</button>
-            </div>
-        </div>
+</div>
+<div class="competitor-container">
+    <div class="row">
+        <div class="nm col-md-12"><a href="url">mobilluck</a></div>
+        <div class="nm col-md-12"><a href="url">techno</a></div>
+        <div class="nm col-md-12"><a href="url">nobu</a></div>
+        <div class="nm col-md-12"><a href="url">officeman</a></div>
+    </div>
+</div>
+</body>

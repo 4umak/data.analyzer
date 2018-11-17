@@ -1,9 +1,28 @@
 <% include common/header.ejs%>
 <div class="top-panel">
     <div class="menu">
-        <span class="menu-item"><a href="/">Goods</a></span>
-        <span class="menu-item"><a href="parsed.html">Parsing</a></span>
-        <span class="menu-item"><a href="urls.html">Parse Urls</a></span>
+        <span class="menu-item" id="goods"><a>Goods</a></span>
+        <span class="menu-item" id="competitor"><a>Parsing</a></span>
+        <span class="menu-item" id="parse"><a>Parse URLS</a></span>
+    </div>
+</div>
+<div class="add-container">
+    <div class="row">
+        <div class="ad col-lg-5 col-md-5 col-sm-6">Competitor's Name:<input></div>
+        <div class="ad col-lg-4 col-md-4 col-sm-3"><input type="file" name="f" multiple
+                                                          accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+        </div>
+        <div class="ad col-lg-3 col-md-3 col-sm-3">
+            <button type="button" id="add" class="btn btn-info">Add</button>
+        </div>
+    </div>
+</div>
+<div class="competitor-container">
+    <div class="row">
+        <div class="nm col-md-12"><a href="url">mobilluck</a></div>
+        <div class="nm col-md-12"><a href="url">techno</a></div>
+        <div class="nm col-md-12"><a href="url">nobu</a></div>
+        <div class="nm col-md-12"><a href="url">officeman</a></div>
     </div>
 </div>
 <!--<div class = "add-product-container">-->
@@ -28,12 +47,4 @@
         <!--<button type="button" class="btn btn-info col-md-2">Parse</button>-->
     <!--</div>-->
 <!--</div>-->
-<div class="products-table-container" id="products">
-    <div class="row">
-        <div class="nm col-xs-2">Date</div>
-        <div class="nm col-xs-2">Competitor</div>
-        <div class="nm col-xs-6">Name</div>
-        <div class="nm col-xs-2">Price</div>
-    </div>
-</div>
 <% include common/footer.ejs %>

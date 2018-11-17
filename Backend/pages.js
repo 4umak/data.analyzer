@@ -30,7 +30,7 @@ exports.competitor = function (req,res) {
     })
 };
 
-exports.filter= function (req, res) {
+exports.filter = function (req, res) {
     res.render('filter', {
         pageTitle: 'Data Analyzer',
         less: 'filter',

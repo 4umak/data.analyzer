@@ -65,7 +65,6 @@ function initialiseGoods(name) {
                         items.push(one);
                     }
                 }
-
                 var array = [];
                 for (i = 0; i < items.length; i++) {
                     if (!checkIfExist(array, items[i].articul)) array.push(takeMaxDate(items, items[i]));
@@ -133,6 +132,7 @@ function parse(urls, i, end, competitor, articuls) {
             url: urls[i],
             articul: articuls[i]
         };
+        i++;
         switch (competitor) {
             case 'techno':
                 API.parseTechno(url, function (err, res) {

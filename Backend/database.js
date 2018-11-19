@@ -22,7 +22,9 @@ var parsed = new mongoose.Schema({
     name: {type: String},
     item_name: {type: String},
     price: {type: String},
-    time: {type: String}
+    time: {type: String},
+    articul: {type: String},
+    url: {type: String}
 });
 
 var competitors = new mongoose.Schema({

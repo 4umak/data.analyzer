@@ -90,12 +90,12 @@ var $competitors = $('#competitors');
 var $name = $('#name');
 
 $(function () {
-    readExcel();
-    showCompetitors();
+    // readExcel();
+    // showCompetitors();
     var competitor_name = {
         name: 'techno'
     };
-    // getUrls(competitor_name)
+    getUrls(competitor_name);
 });
 
 function showParsed(item) {
@@ -121,6 +121,42 @@ function showCompetitors() {
             });
         }
     })
+}
+
+function addLast(one) {
+    var html_code = Templates.competitorName({competitor: one});
+    var $node = $(html_code);
+
+    $node.find('.competitor-name').click(function () {
+        var name = this.id;
+        Storage.set('name', name);
+        document.location.href = '/competitor.html'
+    });
+    $competitors.append($node);
+}
+
+function getUrls(name) {
+    API.getUrls(name, function (err, res) {
+        if (!err) {
+            if (!res.empty) {
+                var urls = [];
+                for (var n = 0; n < res.urls.length; n++) {
+                    for(var k in res.urls[n]) {
+                        if (k === 'url') {
+                            var a = res.urls[n];
+                            var url = a[k];
+                        }
+                    }
+                    urls.push(url);
+                }
+                var i = 0;
+                var end = res.urls.length;
+                parse(urls, i, end, name.name);
+            } else {
+                alert('Немає такого конкурента.');
+            }
+        }
+    });
 }
 
 function parse(urls, i, end, competitor) {
@@ -170,20 +206,6 @@ function parse(urls, i, end, competitor) {
     } else {
         alert("Parsed All!");
     }
-}
-
-function getUrls(name) {
-    API.getUrls(name, function (err, res) {
-        if (!err) {
-            if (!res.empty) {
-                var i = 0;
-                var end = res.urls.length;
-                parse(res.urls, i, end, name.name);
-            } else {
-                alert('Немає такого конкурента.');
-            }
-        }
-    });
 }
 
 function readExcel() {
@@ -240,15 +262,7 @@ function filePicked(oEvent) {
                                     var one = {
                                         name: name
                                     };
-                                    var html_code = Templates.competitorName({competitor: one});
-                                    var $node = $(html_code);
-
-                                    $node.find('.competitor-name').click(function () {
-                                        var name = this.id;
-                                        Storage.set('name', name);
-                                        document.location.href = '/competitor.html'
-                                    });
-                                    $competitors.append($node);
+                                    addLast(one);
                                 }
                                 if (res.added) {
                                     alert('Посилання до існуючого конкурента ' + item.name + ' добавлені!');
@@ -257,15 +271,7 @@ function filePicked(oEvent) {
                                     var one = {
                                         name: name
                                     };
-                                    var html_code = Templates.competitorName({competitor: one});
-                                    var $node = $(html_code);
-
-                                    $node.find('.competitor-name').click(function () {
-                                        var name = this.id;
-                                        Storage.set('name', name);
-                                        document.location.href = '/competitor.html'
-                                    });
-                                    $competitors.append($node);
+                                    addLast(one);
                                 }
                             }
                         });

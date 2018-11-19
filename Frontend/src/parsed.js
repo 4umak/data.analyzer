@@ -121,20 +121,30 @@ function filePicked(oEvent) {
             $('#accept').click(function () {
                 var name = $name.val();
                 if (name !== "") {
-                    var arr = [];
+                    var urls = [];
                     for (var i = 0; i < oJS.length; i++) {
                         for(var k in oJS[i]) {
+                            console.log(oJS[i]);
                             if (k === name) {
                                 var a = oJS[i];
-                                arr.push(a[k]);
+                                var url = a[k];
+                            }
+                            if (k === 'Articul') {
+                                var b = oJS[i];
+                                var articul = b[k];
                             }
                         }
+                        var obj = {
+                            url: url,
+                            articul: articul
+                        };
+                        urls.push(obj);
                     }
                     var item = {
                         name: name,
-                        urls: arr
+                        urls: urls
                     };
-                    if (arr.length === 0) {
+                    if (urls.length === 0) {
                         alert('Такого конкурента не знайдено в таблиці!')
                     } else {
                         API.parseUrls(item, function (err, res) {
@@ -143,11 +153,35 @@ function filePicked(oEvent) {
                                     alert('Посилання на конкурента ' + item.name + ' створено!');
                                     $name.val('');
                                     $('#input-excel').val('');
+                                    var one = {
+                                        name: name
+                                    };
+                                    var html_code = Templates.competitorName({competitor: one});
+                                    var $node = $(html_code);
+
+                                    $node.find('.competitor-name').click(function () {
+                                        var name = this.id;
+                                        Storage.set('name', name);
+                                        document.location.href = '/competitor.html'
+                                    });
+                                    $competitors.append($node);
                                 }
                                 if (res.added) {
                                     alert('Посилання до існуючого конкурента ' + item.name + ' добавлені!');
                                     $name.val('');
                                     $('#input-excel').val('');
+                                    var one = {
+                                        name: name
+                                    };
+                                    var html_code = Templates.competitorName({competitor: one});
+                                    var $node = $(html_code);
+
+                                    $node.find('.competitor-name').click(function () {
+                                        var name = this.id;
+                                        Storage.set('name', name);
+                                        document.location.href = '/competitor.html'
+                                    });
+                                    $competitors.append($node);
                                 }
                             }
                         });

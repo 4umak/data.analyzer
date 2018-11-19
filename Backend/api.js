@@ -55,6 +55,13 @@ exports.showCompetitors = function (req, res) {
     })
 };
 
+exports.takeParsed = function (req, res) {
+  Parsed.find(function (err, result) {
+      if (err) throw err;
+      res.send(result);
+  })
+};
+
 exports.getUrls = function (req, res) {
     var name = req.body.name;
     UrlsCompetitors.findOne(
@@ -73,7 +80,7 @@ exports.getUrls = function (req, res) {
 
 exports.parseTechno = function (req, res) {
     var url = req.body.url;
-
+    var articul = req.body.articul;
     osmosis
         .get(url)
         .set({'name':'h1', 'price': '#price'})
@@ -92,10 +99,12 @@ exports.parseTechno = function (req, res) {
             var second = current.getSeconds();
             var date = year + '-' + month + '-' + day + 'T' + hour + ':' + minute + ':' + second + 'Z';
             var techno = new Parsed({
-                name: 'A-Техно',
+                name: 'techno',
                 item_name: data.name,
                 price: price,
-                time: date
+                time: date,
+                url: url,
+                articul: articul
             });
             techno.save(function(err){
                 if(!err) {
@@ -108,7 +117,7 @@ exports.parseTechno = function (req, res) {
 
 exports.parseNobu = function(req,res){
     var url = req.body.url;
-
+    var articul = req.body.articul;
     osmosis
         .get(url)
         .set({'name':'#pagetitle','price':'.price'})
@@ -127,10 +136,12 @@ exports.parseNobu = function(req,res){
             var second = current.getSeconds();
             var date = year + '-' + month + '-' + day + 'T' + hour + ':' + minute + ':' + second + 'Z';
             var nobu = new Parsed({
-                name: 'Nobu',
+                name: 'nobu',
                 item_name: data.name,
                 price: price,
-                time: date
+                time: date,
+                url: url,
+                articul: articul
             });
             nobu.save(function(err){
                 if(!err) {
@@ -143,6 +154,7 @@ exports.parseNobu = function(req,res){
 
 exports.parseOfficeman = function(req,res){
     var url = req.body.url;
+    var articul = req.body.articul;
     osmosis
         .get(url)
         .set({'name':'h1','price':'.main'})
@@ -161,10 +173,12 @@ exports.parseOfficeman = function(req,res){
             var second = current.getSeconds();
             var date = year + '-' + month + '-' + day + 'T' + hour + ':' + minute + ':' + second + 'Z';
             var officeman = new Parsed({
-                name: 'Officeman',
+                name: 'officeman',
                 item_name: data.name,
                 price: price,
-                time: date
+                time: date,
+                url: url,
+                articul: articul
             });
             officeman.save(function(err){
                 if(!err) {
@@ -177,6 +191,7 @@ exports.parseOfficeman = function(req,res){
 
 exports.parseMobilluck = function(req,res){
     var url = req.body.url;
+    var articul = req.body.articul;
     osmosis
         .get(url)
         .set({'name':'.mgood_title','price':'.price'})
@@ -195,10 +210,12 @@ exports.parseMobilluck = function(req,res){
             var second = current.getSeconds();
             var date = year + '-' + month + '-' + day + 'T' + hour + ':' + minute + ':' + second + 'Z';
             var mobilluck = new Parsed({
-                name: 'Mobilluck',
+                name: 'mobilluck',
                 item_name: data.name,
                 price: price,
-                time: date
+                time: date,
+                url: url,
+                articul: articul
             });
             mobilluck.save(function(err){
                 if(!err) {

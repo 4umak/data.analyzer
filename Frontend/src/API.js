@@ -28,16 +28,20 @@ function backendPost(url, data, callback) {
     })
 }
 
-exports.writeGoods = function (one_item, callback) {
-    backendPost('/api/writeGoods/', one_item, callback)
-};
-
 exports.showGoods = function (callback) {
     backendGet('/api/getGoods/', callback);
 };
 
 exports.showCompetitors = function(callback) {
   backendGet('/api/getCompetitors/', callback);
+};
+
+exports.takeParsed = function(callback) {
+  backendGet('/api/takeParsed/', callback);
+};
+
+exports.writeGoods = function (one_item, callback) {
+    backendPost('/api/writeGoods/', one_item, callback)
 };
 
 exports.getUrls = function (name, callback) {

@@ -1,17 +1,13 @@
 var API = require('./API');
 var Templates = require('./Templates');
-var Storage = require('./LocalStorage.js');
+var Storage = require('./LocalStorage');
 var $container = $('#products');
 var $competitors = $('#competitors');
 var $name = $('#name');
 
 $(function () {
-    // readExcel();
-    // showCompetitors();
-    var competitor_name = {
-        name: 'techno'
-    };
-    getUrls(competitor_name);
+    readExcel();
+    showCompetitors();
 });
 
 function showParsed(item) {
@@ -49,79 +45,6 @@ function addLast(one) {
         document.location.href = '/competitor.html'
     });
     $competitors.append($node);
-}
-
-function getUrls(name) {
-    API.getUrls(name, function (err, res) {
-        if (!err) {
-            if (!res.empty) {
-                var urls = [];
-                for (var n = 0; n < res.urls.length; n++) {
-                    for(var k in res.urls[n]) {
-                        if (k === 'url') {
-                            var a = res.urls[n];
-                            var url = a[k];
-                        }
-                    }
-                    urls.push(url);
-                }
-                var i = 0;
-                var end = res.urls.length;
-                parse(urls, i, end, name.name);
-            } else {
-                alert('Немає такого конкурента.');
-            }
-        }
-    });
-}
-
-function parse(urls, i, end, competitor) {
-    if (i < end) {
-        var url = {
-            url: urls[i]
-        };
-        console.log(competitor);
-        switch (competitor) {
-            case 'techno':
-                API.parseTechno(url, function (err, res) {
-                    if (!err) {
-                        if (res.next) {
-                            parse(urls, i++, end, competitor);
-                        }
-                    }
-                });
-                break;
-            case 'mobilluck':
-                API.parseMobilluck(url, function (err, res) {
-                    if (!err) {
-                        if (res.next) {
-                            parse(urls, i++, end, competitor);
-                        }
-                    }
-                });
-                break;
-            case 'nobu':
-                API.parseNobu(url, function (err, res) {
-                    if (!err) {
-                        if (res.next) {
-                            parse(urls, i++, end, competitor);
-                        }
-                    }
-                });
-                break;
-            case 'officeman':
-                API.parseOfficeman(url, function (err, res) {
-                    if (!err) {
-                        if (res.next) {
-                            parse(urls, i++, end, competitor);
-                        }
-                    }
-                });
-                break;
-        }
-    } else {
-        alert("Parsed All!");
-    }
 }
 
 function readExcel() {
@@ -171,11 +94,12 @@ function filePicked(oEvent) {
                     } else {
                         API.parseUrls(item, function (err, res) {
                             if (!err) {
+                                var one;
                                 if (res.success) {
                                     alert('Посилання на конкурента ' + item.name + ' створено!');
                                     $name.val('');
                                     $('#input-excel').val('');
-                                    var one = {
+                                    one = {
                                         name: name
                                     };
                                     addLast(one);
@@ -184,7 +108,7 @@ function filePicked(oEvent) {
                                     alert('Посилання до існуючого конкурента ' + item.name + ' добавлені!');
                                     $name.val('');
                                     $('#input-excel').val('');
-                                    var one = {
+                                    one = {
                                         name: name
                                     };
                                     addLast(one);

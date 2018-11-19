@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c539fdc-823d-4f43-90fc-55c640a60484" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Frontend/templates/competitorOneGoods.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/views/competitor.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/views/competitor.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/API.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/API.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/Templates.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/Templates.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/competitor.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/competitor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/parsed.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/parsed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/www/assets/js/competitor.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/www/assets/js/competitor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/www/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/www/assets/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/www/assets/js/parsed.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/www/assets/js/parsed.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -41,38 +50,38 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="ejs" value="33" />
+          <entry key="ejs" value="36" />
           <entry key="gitignore" value="1" />
           <entry key="html" value="8" />
-          <entry key="js" value="73" />
+          <entry key="js" value="77" />
           <entry key="json" value="5" />
           <entry key="less" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="EJS" value="33" />
+          <entry key="EJS" value="36" />
           <entry key="HTML" value="8" />
           <entry key="JSON" value="5" />
-          <entry key="JavaScript" value="73" />
+          <entry key="JavaScript" value="77" />
           <entry key="Less" value="7" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="ejs" value="725" />
+          <entry key="ejs" value="810" />
           <entry key="gitignore" value="7" />
           <entry key="html" value="397" />
-          <entry key="js" value="9966" />
+          <entry key="js" value="11944" />
           <entry key="less" value="153" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="EJS" value="725" />
+          <entry key="EJS" value="810" />
           <entry key="HTML" value="397" />
-          <entry key="JavaScript" value="9966" />
+          <entry key="JavaScript" value="11944" />
           <entry key="Less" value="153" />
           <entry key="PLAIN_TEXT" value="7" />
         </counts>
@@ -128,10 +137,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Frontend/src/competitor.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="14" column="67" lean-forward="true" selection-start-line="14" selection-start-column="67" selection-end-line="14" selection-end-column="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Frontend/src/Templates.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Frontend/src/parsed.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-231">
-              <caret line="70" column="16" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="16" />
+            <state relative-caret-position="673">
+              <caret line="194" column="36" selection-start-line="194" selection-start-column="36" selection-end-line="194" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -139,8 +166,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Backend/api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-72">
-              <caret line="53" column="25" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
+            <state relative-caret-position="198">
+              <caret line="104" column="20" lean-forward="true" selection-start-line="104" selection-start-column="20" selection-end-line="104" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Frontend/src/API.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="44" column="2" selection-start-line="44" selection-start-column="2" selection-end-line="44" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -148,62 +193,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Frontend/src/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frontend/templates/competitorName.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" column="101" selection-start-line="1" selection-start-column="101" selection-end-line="1" selection-end-column="101" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frontend/www/assets/less/competitors.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="936">
-              <caret line="52" column="1" selection-start-line="15" selection-end-line="52" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frontend/www/assets/less/parsed.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1548">
-              <caret line="86" column="17" selection-start-line="86" selection-start-column="17" selection-end-line="86" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frontend/src/competitor.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend/views/competitor.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="51" lean-forward="true" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gruntfile.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1026">
-              <caret line="57" column="35" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
+            <state relative-caret-position="216">
+              <caret line="58" selection-start-line="58" selection-end-line="75" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -242,8 +233,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Frontend/www/index.html" />
-        <option value="$PROJECT_DIR$/Frontend/src/Templates.js" />
         <option value="$PROJECT_DIR$/Frontend/templates/oneItem.ejs" />
         <option value="$PROJECT_DIR$/Frontend/src/parserExcel.js" />
         <option value="$PROJECT_DIR$/Backend/views/common/heade.ejs" />
@@ -256,18 +245,15 @@
         <option value="$PROJECT_DIR$/Backend/views/parsedUrls.ejs" />
         <option value="$PROJECT_DIR$/Frontend/src/main.js" />
         <option value="$PROJECT_DIR$/Frontend/src/urls.js" />
-        <option value="$PROJECT_DIR$/Frontend/src/API.js" />
         <option value="$PROJECT_DIR$/Frontend/templates/oneParsed.ejs" />
         <option value="$PROJECT_DIR$/Frontend/src/oo.js" />
         <option value="$PROJECT_DIR$/Backend/filters.js" />
-        <option value="$PROJECT_DIR$/Backend/api.js" />
         <option value="$PROJECT_DIR$/Frontend/www/parsed.html" />
         <option value="$PROJECT_DIR$/Backend/views/common/footer.ejs" />
         <option value="$PROJECT_DIR$/Frontend/src/urls.js" />
         <option value="$PROJECT_DIR$/Backend/views/mainPage.ejs" />
         <option value="$PROJECT_DIR$/Backend/views/parsedUrls.ejs" />
         <option value="$PROJECT_DIR$/Frontend/src/main.js" />
-        <option value="$PROJECT_DIR$/Backend/api.js" />
         <option value="$PROJECT_DIR$/Backend/views/common/competitor.ejs" />
         <option value="$PROJECT_DIR$/Backend/views/mainPage.ejs" />
         <option value="$PROJECT_DIR$/Frontend/www/index.html" />
@@ -278,21 +264,26 @@
         <option value="$PROJECT_DIR$/Frontend/www/assets/less/filter.less" />
         <option value="$PROJECT_DIR$/Backend/views/filtersPage.ejs" />
         <option value="$PROJECT_DIR$/Backend/views/parsedPage.ejs" />
-        <option value="$PROJECT_DIR$/Frontend/src/API.js" />
         <option value="$PROJECT_DIR$/Backend/views/parsedPage.ejs" />
-        <option value="$PROJECT_DIR$/Frontend/src/Templates.js" />
-        <option value="$PROJECT_DIR$/Backend/main.js" />
         <option value="$PROJECT_DIR$/Frontend/src/filters.js" />
         <option value="$PROJECT_DIR$/Backend/pages.js" />
         <option value="$PROJECT_DIR$/Backend/pages.js" />
         <option value="$PROJECT_DIR$/Gruntfile.js" />
-        <option value="$PROJECT_DIR$/Backend/views/competitor.ejs" />
         <option value="$PROJECT_DIR$/Frontend/src/LocalStorage.js" />
         <option value="$PROJECT_DIR$/Frontend/templates/competitorName.ejs" />
         <option value="$PROJECT_DIR$/Frontend/www/assets/less/parsed.less" />
+        <option value="$PROJECT_DIR$/Backend/views/competitor.ejs" />
+        <option value="$PROJECT_DIR$/Backend/api.js" />
+        <option value="$PROJECT_DIR$/Backend/api.js" />
+        <option value="$PROJECT_DIR$/Backend/main.js" />
+        <option value="$PROJECT_DIR$/Frontend/src/API.js" />
+        <option value="$PROJECT_DIR$/Frontend/src/API.js" />
+        <option value="$PROJECT_DIR$/Frontend/src/parsed.js" />
+        <option value="$PROJECT_DIR$/Frontend/src/parsed.js" />
+        <option value="$PROJECT_DIR$/Frontend/src/Templates.js" />
+        <option value="$PROJECT_DIR$/Frontend/src/Templates.js" />
         <option value="$PROJECT_DIR$/Frontend/src/competitor.js" />
-        <option value="$PROJECT_DIR$/Frontend/src/parsed.js" />
-        <option value="$PROJECT_DIR$/Frontend/src/parsed.js" />
+        <option value="$PROJECT_DIR$/Frontend/templates/competitorOneGoods.ejs" />
       </list>
     </option>
   </component>
@@ -422,6 +413,117 @@
       <recent name="$PROJECT_DIR$/Frontend/src" />
     </key>
   </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Backend/filters.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Backend/views/filter.ejs</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -465,7 +567,7 @@
       <workItem from="1542276451680" duration="9617000" />
       <workItem from="1542450538232" duration="141000" />
       <workItem from="1542476740459" duration="4814000" />
-      <workItem from="1542650309051" duration="3429000" />
+      <workItem from="1542650309051" duration="11142000" />
     </task>
     <task id="LOCAL-00001" summary="added all filters">
       <created>1542287009717</created>
@@ -502,22 +604,29 @@
       <option name="project" value="LOCAL" />
       <updated>1542480548918</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add filters and competitors">
+      <created>1542653856295</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1542653856295</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91208000" />
+    <option name="totallyTimeSpent" value="98921000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="28" width="1366" height="740" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.23099852" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.23099852" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="0" sideWeight="0.49925485" visible="true" weight="0.32520324" />
+      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.49925485" visible="true" weight="0.32520324" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5007452" side_tool="true" weight="0.32520324" />
-      <window_info anchor="bottom" id="Version Control" order="2" weight="0.32884097" />
+      <window_info anchor="bottom" id="Version Control" order="2" weight="0.3284553" />
       <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.3284553" />
@@ -557,9 +666,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="add filters and competitors" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Frontend/www/assets/js/main.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-714" />
@@ -606,13 +712,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/src/parserExcel.js" />
     <entry file="file://$PROJECT_DIR$/Frontend/src/urls.js" />
-    <entry file="file://$PROJECT_DIR$/Frontend/templates/oneItem.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Backend/filters.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
@@ -640,20 +739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="25" column="3" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/src/API.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="39" column="47" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/templates/oneParsed.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -707,13 +792,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Backend/views/filtersPage.ejs" />
-    <entry file="file://$PROJECT_DIR$/Frontend/src/Templates.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Backend/views/filter.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -733,13 +811,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -780,20 +851,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/src/competitor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/views/competitor.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="51" lean-forward="true" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1026">
@@ -808,6 +865,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="58" selection-start-line="58" selection-end-line="75" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/templates/competitorName.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -815,24 +879,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/api.js">
+    <entry file="file://$PROJECT_DIR$/Frontend/templates/oneParsed.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-72">
-          <caret line="53" column="25" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
+        <state relative-caret-position="72">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/src/main.js">
+    <entry file="file://$PROJECT_DIR$/Backend/views/competitor.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="126">
+          <caret line="7" column="50" lean-forward="true" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/src/API.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="44" column="2" selection-start-line="44" selection-start-column="2" selection-end-line="44" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="104" column="20" lean-forward="true" selection-start-line="104" selection-start-column="20" selection-end-line="104" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/src/Templates.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/src/parsed.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-231">
-          <caret line="70" column="16" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="16" />
+        <state relative-caret-position="673">
+          <caret line="194" column="36" selection-start-line="194" selection-start-column="36" selection-end-line="194" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/templates/competitorOneGoods.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="57" lean-forward="true" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/templates/oneItem.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/src/competitor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="67" lean-forward="true" selection-start-line="14" selection-start-column="67" selection-end-line="14" selection-end-column="67" />
         </state>
       </provider>
     </entry>

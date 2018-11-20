@@ -94,24 +94,13 @@ function filePicked(oEvent) {
                     } else {
                         API.parseUrls(item, function (err, res) {
                             if (!err) {
-                                var one;
                                 if (res.success) {
                                     alert('Посилання на конкурента ' + item.name + ' створено!');
-                                    $name.val('');
-                                    $('#input-excel').val('');
-                                    one = {
-                                        name: name
-                                    };
-                                    addLast(one);
+                                    document.location.href = '/parsed.html'
                                 }
                                 if (res.added) {
                                     alert('Посилання до існуючого конкурента ' + item.name + ' добавлені!');
-                                    $name.val('');
-                                    $('#input-excel').val('');
-                                    one = {
-                                        name: name
-                                    };
-                                    addLast(one);
+                                    document.location.href = '/parsed.html'
                                 }
                             }
                         });

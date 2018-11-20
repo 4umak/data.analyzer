@@ -63,7 +63,40 @@ function showGoods(list) {
         var $node = $(html_code);
         
         $node.find('.delete').click(function () {
-            console.log('delete');
+            API.deleteGoods(item, function (err, res) {
+                if (!err && res) {
+                    $node.remove();
+                }
+            })
+        });
+        $node.find('.edit').click(function () {
+            var html_code2 = Templates.editItem({item: item});
+            var $node2 = $(html_code2);
+            $node.replaceWith($node2);
+
+            $node2.find('.save').click(function () {
+                var id = item.id;
+                var articul = $('#c_articul').val();
+                var name = $('#c_name').val();
+                var brand = $('#c_brand').val();
+                var price = $('#c_price').val();
+                if(validator(id, articul, name, brand, price)) {
+                    var edit = {
+                        id: id,
+                        articul: articul,
+                        name: name,
+                        brand: brand,
+                        price: price
+                    };
+                    API.editGoods(edit, function (err, res) {
+                        if(!err) {
+                            document.location.href = '/';
+                        }
+                    })
+                } else {
+                    alert('Перевірте коректність даних!');
+                }
+            });
         });
         $products.append($node);
     }

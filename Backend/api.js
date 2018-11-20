@@ -1,5 +1,4 @@
 var db = require('./database.js');
-var filters = require('./filters.js');
 var osmosis = require('osmosis');
 var Goods = db.Goods;
 var Parsed = db.Parsed;
@@ -266,28 +265,50 @@ exports.writeCompetitors = function (req, res) {
     )
 };
 
-exports.searchByPrice = function (req, res) {
-    var articul = req.body.articul;
-    var comparator = req.body.comparator;
-    var dataset = []; // all parsed data
-    var goods = []; // all goods
-    var result = filters.filterByPrice(articul,comparator, dataset,goods);
-    //res.send(result);
+exports.deleteGoods = function (req, res) {
+    var id = req.body.id;
+
+    var query = {id: id};
+
+    Goods.deleteOne(query, function (error, result) {
+       if (error) throw error;
+       res.send(true);
+    });
 };
 
-exports.searchByCompetitor = function(req, res){
-    var name = req.body.name;
-    var dataset = []; // all parsed data
-    var result = filters.filterByCompetitor(name,dataset);
-    //res.send(result);
-};
+exports.editGoods = function (req, res) {
+  var id = req.body.id;
+  var articul = req.body.articul;
+  var name = req.body.name;
+  var brand = req.body.brand;
+  var price = req.body.price;
 
-exports.searchByPeriod = function (req, res) {
-    var articul = req.body.articul;
-    var date1 = req.body.date1;
-    var date2 = req.body.date2;
-    var dataset = []; // all parsed data
-    var result = filters.filterByPeriod(articul,date1,date2,dataset);
-    //res.send(result);
+  Goods.findOne(
+      {
+          id: id
+      },
+      function (err, item) {
+          if(item) {
+              Goods.update(
+                  {
+                      id: id
+                  },
+                  {
+                      articul: articul,
+                      name: name,
+                      brand: brand,
+                      price: price
+                  },
+                  function () {}
+              );
+              var one = {
+                  id: id,
+                  articul: articul,
+                  name: name,
+                  brand: brand,
+                  price: price
+              };
+              res.send(one);
+          }
+      });
 };
-

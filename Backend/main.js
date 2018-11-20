@@ -18,9 +18,8 @@ function configureEndpoints(app) {
     app.post('/api/parseNobu/', api.parseNobu);
     app.post('/api/parseOfficeman/', api.parseOfficeman);
     app.post('/api/parseUrls/', api.writeCompetitors);
-    app.post('/api/searchByPrice/',api.searchByPrice);
-    app.post('/api/searchByPrice/', api.searchByCompetitor);
-    app.post('/api/searchByPeriod/', api.searchByPeriod);
+    app.post('/api/deleteGoods/', api.deleteGoods);
+    app.post('/api/editGoods/', api.editGoods);
 
     app.get('/', pages.mainPage);
     app.get('/parsed.html', pages.parsedPage);

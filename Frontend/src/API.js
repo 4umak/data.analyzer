@@ -68,24 +68,10 @@ exports.parseOfficeman = function (url, callback) {
   backendPost('/api/parseOfficeman/', url, callback);
 };
 
-exports.searchByPrice = function (articul,comparator,callback) {
-    const obj = {
-        articul: articul,
-        comparator: comparator
-    };
-    console.log("in API " + "   " + articul + "   " + comparator);
-    backendPost('/api/searchByPrice/', obj, callback);
+exports.deleteGoods = function (id, callback) {
+  backendPost('/api/deleteGoods/', id, callback);
 };
 
-exports.searchByCompetitor = function (name, callback) {
-    backendPost('/api/searchByCompetitor/', name, callback);
-};
-
-exports.searchByPeriod = function (articul,date1,date2, callback) {
-    const obj = {
-        articul: articul,
-        date1: date1,
-        date2: date2
-    };
-    backendPost('/api/searchByPeriod/', obj, callback);
+exports.editGoods = function (item, callback) {
+    backendPost('/api/editGoods/', item, callback);
 };

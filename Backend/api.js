@@ -278,7 +278,6 @@ exports.deleteGoods = function (req, res) {
 
 exports.editGoods = function (req, res) {
   var id = req.body.id;
-  var articul = req.body.articul;
   var name = req.body.name;
   var brand = req.body.brand;
   var price = req.body.price;
@@ -294,7 +293,6 @@ exports.editGoods = function (req, res) {
                       id: id
                   },
                   {
-                      articul: articul,
                       name: name,
                       brand: brand,
                       price: price
@@ -303,7 +301,6 @@ exports.editGoods = function (req, res) {
               );
               var one = {
                   id: id,
-                  articul: articul,
                   name: name,
                   brand: brand,
                   price: price

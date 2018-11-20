@@ -76,14 +76,13 @@ function showGoods(list) {
 
             $node2.find('.save').click(function () {
                 var id = item.id;
-                var articul = $('#c_articul').val();
+                var articul = item.articul;
                 var name = $('#c_name').val();
                 var brand = $('#c_brand').val();
                 var price = $('#c_price').val();
                 if(validator(id, articul, name, brand, price)) {
                     var edit = {
                         id: id,
-                        articul: articul,
                         name: name,
                         brand: brand,
                         price: price

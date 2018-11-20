@@ -73,5 +73,5 @@ exports.deleteGoods = function (id, callback) {
 };
 
 exports.editGoods = function (item, callback) {
-  backendPost('/api/editGoods/', item, callback);
+    backendPost('/api/editGoods/', item, callback);
 };

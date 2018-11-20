@@ -67,3 +67,11 @@ exports.parseNobu = function (url, callback) {
 exports.parseOfficeman = function (url, callback) {
   backendPost('/api/parseOfficeman/', url, callback);
 };
+
+exports.deleteGoods = function (id, callback) {
+  backendPost('/api/deleteGoods/', id, callback);
+};
+
+exports.editGoods = function (item, callback) {
+  backendPost('/api/editGoods/', item, callback);
+};

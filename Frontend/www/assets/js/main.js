@@ -68,14 +68,23 @@ exports.parseNobu = function (url, callback) {
 exports.parseOfficeman = function (url, callback) {
   backendPost('/api/parseOfficeman/', url, callback);
 };
+
+exports.deleteGoods = function (id, callback) {
+  backendPost('/api/deleteGoods/', id, callback);
+};
+
+exports.editGoods = function (item, callback) {
+  backendPost('/api/editGoods/', item, callback);
+};
 },{}],2:[function(require,module,exports){
 
 var ejs = require('ejs');
 
-exports.oneItem = ejs.compile("<div class=\"row\">\n    <div class=\"one-item articul col-xs-1\"><%= item.id%></div>\n    <div class=\"one-item name col-xs-2\"><%= item.articul%></div>\n    <div class=\"one-item brand col-xs-4\"><%= item.name%></div>\n    <div class=\"one-item supplier col-xs-2\"><%= item.brand%></div>\n    <div class=\"one-item price col-xs-1\"><%= item.price%>$</div>\n    <div class=\"one-item action col-xs-2\"><button class=\"edit\">Edit</button><button class=\"delete\">Delete</button></div>\n</div>");
+exports.oneItem = ejs.compile("<div class=\"row\">\n    <div class=\"one-item id col-xs-1\"><%= item.id%></div>\n    <div class=\"one-item articul col-xs-2\"><%= item.articul%></div>\n    <div class=\"one-item name col-xs-4\"><%= item.name%></div>\n    <div class=\"one-item brand col-xs-2\"><%= item.brand%></div>\n    <div class=\"one-item price col-xs-1\"><%= item.price%>$</div>\n    <div class=\"one-item action col-xs-2\"><button class=\"edit\">Edit</button><button class=\"delete\">Delete</button></div>\n</div>");
 exports.oneParsed = ejs.compile("<div class=\"row\">\n    <div class=\"one-item col-xs-2\"><%= item.time%></div>\n    <div class=\"one-item col-xs-2\"><%= item.name%></div>\n    <div class=\"one-item col-xs-6\"><%= item.item_name%></div>\n    <div class=\"one-item col-xs-2\"><%= item.price%></div>\n</div>");
 exports.competitorName = ejs.compile("<div class=\"a\">\n    <div class=\"nm col-md-12 competitor-name\" id=\"<%= competitor.name%>\"><a><%= competitor.name%></a></div>\n</div>");
 exports.competitorOneGoods = ejs.compile("<div class=\"table-row\">\n    <div class=\"col-item size-1 date\"><%= item.time%></div>\n    <div class=\"col-item size-2 name\"><%= item.name%></div>\n    <div class=\"col-item size-1 price\"><%= item.price%></div>\n    <div class=\"col-item size-1 url\"><a href=\"<%= item.url%>\" target=\"_blank\"><%= item.url%></a></div>\n</div>");
+exports.editItem = ejs.compile("<div class=\"row\">\n    <div class=\"one-item id col-xs-1\"><%= item.id%></div>\n    <div class=\"one-item articul col-xs-2\"><input id=\"c_articul\" value=\"<%= item.articul%>\"/></div>\n    <div class=\"one-item name col-xs-4\"><input id=\"c_name\" value=\"<%= item.name%>\"/></div>\n    <div class=\"one-item brand col-xs-2\"><input id=\"c_brand\" value=\"<%= item.brand%>\"/></div>\n    <div class=\"one-item price col-xs-1\"><input id=\"c_price\" value=\"<%= item.price%>\"/></div>\n    <div class=\"one-item action col-xs-2\"><button class=\"save\">Save</button></div>\n</div>");
 },{"ejs":5}],3:[function(require,module,exports){
 var API = require('./API');
 var Templates = require('./Templates');
@@ -142,7 +151,40 @@ function showGoods(list) {
         var $node = $(html_code);
         
         $node.find('.delete').click(function () {
-            console.log('delete');
+            API.deleteGoods(item, function (err, res) {
+                if (!err && res) {
+                    $node.remove();
+                }
+            })
+        });
+        $node.find('.edit').click(function () {
+            var html_code2 = Templates.editItem({item: item});
+            var $node2 = $(html_code2);
+            $node.replaceWith($node2);
+
+            $node2.find('.save').click(function () {
+                var id = item.id;
+                var articul = $('#c_articul').val();
+                var name = $('#c_name').val();
+                var brand = $('#c_brand').val();
+                var price = $('#c_price').val();
+                if(validator(id, articul, name, brand, price)) {
+                    var edit = {
+                        id: id,
+                        articul: articul,
+                        name: name,
+                        brand: brand,
+                        price: price
+                    };
+                    API.editGoods(edit, function (err, res) {
+                        if(!err) {
+                            document.location.href = '/';
+                        }
+                    })
+                } else {
+                    alert('Перевірте коректність даних!');
+                }
+            });
         });
         $products.append($node);
     }

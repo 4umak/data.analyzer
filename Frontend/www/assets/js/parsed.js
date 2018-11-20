@@ -68,6 +68,14 @@ exports.parseNobu = function (url, callback) {
 exports.parseOfficeman = function (url, callback) {
   backendPost('/api/parseOfficeman/', url, callback);
 };
+
+exports.deleteGoods = function (id, callback) {
+  backendPost('/api/deleteGoods/', id, callback);
+};
+
+exports.editGoods = function (item, callback) {
+  backendPost('/api/editGoods/', item, callback);
+};
 },{}],2:[function(require,module,exports){
 var basil = require('basil.js');
 basil = new basil();
@@ -82,10 +90,11 @@ exports.set = function (key, value) {
 
 var ejs = require('ejs');
 
-exports.oneItem = ejs.compile("<div class=\"row\">\n    <div class=\"one-item articul col-xs-1\"><%= item.id%></div>\n    <div class=\"one-item name col-xs-2\"><%= item.articul%></div>\n    <div class=\"one-item brand col-xs-4\"><%= item.name%></div>\n    <div class=\"one-item supplier col-xs-2\"><%= item.brand%></div>\n    <div class=\"one-item price col-xs-1\"><%= item.price%>$</div>\n    <div class=\"one-item action col-xs-2\"><button class=\"edit\">Edit</button><button class=\"delete\">Delete</button></div>\n</div>");
+exports.oneItem = ejs.compile("<div class=\"row\">\n    <div class=\"one-item id col-xs-1\"><%= item.id%></div>\n    <div class=\"one-item articul col-xs-2\"><%= item.articul%></div>\n    <div class=\"one-item name col-xs-4\"><%= item.name%></div>\n    <div class=\"one-item brand col-xs-2\"><%= item.brand%></div>\n    <div class=\"one-item price col-xs-1\"><%= item.price%>$</div>\n    <div class=\"one-item action col-xs-2\"><button class=\"edit\">Edit</button><button class=\"delete\">Delete</button></div>\n</div>");
 exports.oneParsed = ejs.compile("<div class=\"row\">\n    <div class=\"one-item col-xs-2\"><%= item.time%></div>\n    <div class=\"one-item col-xs-2\"><%= item.name%></div>\n    <div class=\"one-item col-xs-6\"><%= item.item_name%></div>\n    <div class=\"one-item col-xs-2\"><%= item.price%></div>\n</div>");
 exports.competitorName = ejs.compile("<div class=\"a\">\n    <div class=\"nm col-md-12 competitor-name\" id=\"<%= competitor.name%>\"><a><%= competitor.name%></a></div>\n</div>");
 exports.competitorOneGoods = ejs.compile("<div class=\"table-row\">\n    <div class=\"col-item size-1 date\"><%= item.time%></div>\n    <div class=\"col-item size-2 name\"><%= item.name%></div>\n    <div class=\"col-item size-1 price\"><%= item.price%></div>\n    <div class=\"col-item size-1 url\"><a href=\"<%= item.url%>\" target=\"_blank\"><%= item.url%></a></div>\n</div>");
+exports.editItem = ejs.compile("<div class=\"row\">\n    <div class=\"one-item id col-xs-1\"><%= item.id%></div>\n    <div class=\"one-item articul col-xs-2\"><input id=\"c_articul\" value=\"<%= item.articul%>\"/></div>\n    <div class=\"one-item name col-xs-4\"><input id=\"c_name\" value=\"<%= item.name%>\"/></div>\n    <div class=\"one-item brand col-xs-2\"><input id=\"c_brand\" value=\"<%= item.brand%>\"/></div>\n    <div class=\"one-item price col-xs-1\"><input id=\"c_price\" value=\"<%= item.price%>\"/></div>\n    <div class=\"one-item action col-xs-2\"><button class=\"save\">Save</button></div>\n</div>");
 },{"ejs":7}],4:[function(require,module,exports){
 var API = require('./API');
 var Templates = require('./Templates');
@@ -183,24 +192,13 @@ function filePicked(oEvent) {
                     } else {
                         API.parseUrls(item, function (err, res) {
                             if (!err) {
-                                var one;
                                 if (res.success) {
                                     alert('Посилання на конкурента ' + item.name + ' створено!');
-                                    $name.val('');
-                                    $('#input-excel').val('');
-                                    one = {
-                                        name: name
-                                    };
-                                    addLast(one);
+                                    document.location.href = '/parsed.html'
                                 }
                                 if (res.added) {
                                     alert('Посилання до існуючого конкурента ' + item.name + ' добавлені!');
-                                    $name.val('');
-                                    $('#input-excel').val('');
-                                    one = {
-                                        name: name
-                                    };
-                                    addLast(one);
+                                    document.location.href = '/parsed.html'
                                 }
                             }
                         });

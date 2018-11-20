@@ -264,3 +264,51 @@ exports.writeCompetitors = function (req, res) {
         }
     )
 };
+
+exports.deleteGoods = function (req, res) {
+    var id = req.body.id;
+
+    var query = {id: id};
+
+    Goods.deleteOne(query, function (error, result) {
+       if (error) throw error;
+       res.send(true);
+    });
+};
+
+exports.editGoods = function (req, res) {
+  var id = req.body.id;
+  var articul = req.body.articul;
+  var name = req.body.name;
+  var brand = req.body.brand;
+  var price = req.body.price;
+
+  Goods.findOne(
+      {
+          id: id
+      },
+      function (err, item) {
+          if(item) {
+              Goods.update(
+                  {
+                      id: id
+                  },
+                  {
+                      articul: articul,
+                      name: name,
+                      brand: brand,
+                      price: price
+                  },
+                  function () {}
+              );
+              var one = {
+                  id: id,
+                  articul: articul,
+                  name: name,
+                  brand: brand,
+                  price: price
+              };
+              res.send(one);
+          }
+      });
+};

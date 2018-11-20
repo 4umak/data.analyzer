@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c539fdc-823d-4f43-90fc-55c640a60484" name="Default Changelist" comment="" />
+    <list default="true" id="2c539fdc-823d-4f43-90fc-55c640a60484" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Frontend/www/assets/less/filter.less" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/www/assets/less/filter.less" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -37,23 +39,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="ejs" value="44" />
+          <entry key="ejs" value="45" />
           <entry key="gitignore" value="1" />
           <entry key="hs" value="1" />
-          <entry key="html" value="8" />
+          <entry key="html" value="9" />
           <entry key="js" value="92" />
           <entry key="json" value="5" />
-          <entry key="less" value="8" />
+          <entry key="less" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="EJS" value="44" />
-          <entry key="HTML" value="8" />
+          <entry key="EJS" value="45" />
+          <entry key="HTML" value="9" />
           <entry key="Haskell" value="1" />
           <entry key="JSON" value="5" />
           <entry key="JavaScript" value="92" />
-          <entry key="Less" value="7" />
+          <entry key="Less" value="8" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -64,7 +66,7 @@
           <entry key="hs" value="50" />
           <entry key="html" value="397" />
           <entry key="js" value="14164" />
-          <entry key="less" value="153" />
+          <entry key="less" value="156" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -73,7 +75,7 @@
           <entry key="HTML" value="397" />
           <entry key="Haskell" value="50" />
           <entry key="JavaScript" value="14163" />
-          <entry key="Less" value="153" />
+          <entry key="Less" value="156" />
           <entry key="PLAIN_TEXT" value="7" />
           <entry key="RegExp" value="1" />
         </counts>
@@ -164,11 +166,38 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Frontend/src/filters.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="599">
               <caret line="105" selection-start-line="105" selection-end-line="105" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Frontend/www/assets/less/filter.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="127" column="1" selection-start-line="127" selection-start-column="1" selection-end-line="127" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend/views/filter.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="6" column="61" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Frontend/www/assets/price.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="223">
+              <caret line="51" column="31" lean-forward="true" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -187,24 +216,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="108">
               <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frontend/src/Templates.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="93" lean-forward="true" selection-start-line="7" selection-start-column="93" selection-end-line="7" selection-end-column="93" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frontend/templates/oneItem.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -259,7 +270,6 @@
         <option value="$PROJECT_DIR$/Frontend/www/assets/less/competitors.less" />
         <option value="$PROJECT_DIR$/Frontend/www/filter.html" />
         <option value="$PROJECT_DIR$/Backend/views/filter.ejs" />
-        <option value="$PROJECT_DIR$/Frontend/www/assets/less/filter.less" />
         <option value="$PROJECT_DIR$/Backend/views/filtersPage.ejs" />
         <option value="$PROJECT_DIR$/Backend/views/parsedPage.ejs" />
         <option value="$PROJECT_DIR$/Backend/views/parsedPage.ejs" />
@@ -287,6 +297,7 @@
         <option value="$PROJECT_DIR$/Backend/api.js" />
         <option value="$PROJECT_DIR$/Backend/api.js" />
         <option value="$PROJECT_DIR$/Frontend/src/filters.js" />
+        <option value="$PROJECT_DIR$/Frontend/www/assets/less/filter.less" />
       </list>
     </option>
   </component>
@@ -355,6 +366,27 @@
               <item name="data.analyzer" type="462c0819:PsiDirectoryNode" />
               <item name="Frontend" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data.analyzer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data.analyzer" type="462c0819:PsiDirectoryNode" />
+              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="www" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data.analyzer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data.analyzer" type="462c0819:PsiDirectoryNode" />
+              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="www" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data.analyzer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data.analyzer" type="462c0819:PsiDirectoryNode" />
+              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="www" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="less" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -534,7 +566,7 @@
       <workItem from="1542276451680" duration="9617000" />
       <workItem from="1542450538232" duration="141000" />
       <workItem from="1542476740459" duration="4814000" />
-      <workItem from="1542650309051" duration="25608000" />
+      <workItem from="1542650309051" duration="25870000" />
     </task>
     <task id="LOCAL-00001" summary="added all filters">
       <created>1542287009717</created>
@@ -582,7 +614,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113387000" />
+    <option name="totallyTimeSpent" value="113649000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="28" width="1366" height="740" extended-state="6" />
@@ -591,7 +623,7 @@
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.23099852" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.49925485" weight="0.2601626" />
+      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.49925485" visible="true" weight="0.2601626" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5007452" side_tool="true" weight="0.32520324" />
       <window_info anchor="bottom" id="Version Control" order="2" weight="0.3284553" />
       <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
@@ -633,7 +665,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="add filters and competitors" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Backend/views/common/heade.ejs" />
     <entry file="file://$PROJECT_DIR$/Frontend/www/assets/less/urls.html" />
     <entry file="file://$PROJECT_DIR$/Backend/views/common/foot.ejs" />
     <entry file="file://$PROJECT_DIR$/server.js">
@@ -697,13 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/www/assets/less/filter.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -726,13 +750,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Backend/views/filtersPage.ejs" />
-    <entry file="file://$PROJECT_DIR$/Backend/views/filter.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="61" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Backend/views/common/header.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -915,6 +932,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="599">
           <caret line="105" selection-start-line="105" selection-end-line="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/www/assets/less/filter.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="127" column="1" selection-start-line="127" selection-start-column="1" selection-end-line="127" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/views/filter.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="6" column="61" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/www/assets/price.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="51" column="31" lean-forward="true" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
         </state>
       </provider>
     </entry>

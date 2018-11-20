@@ -29,3 +29,11 @@ exports.filter = function (req, res) {
         js: 'filters'
     })
 };
+
+exports.showFilters = function (req, res) {
+  res.render('showFilters', {
+      pageTitle: 'Data Analyzer',
+      less: 'price',
+      js: 'showFilters'
+  })
+};

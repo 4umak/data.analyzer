@@ -1,12 +1,15 @@
 var API = require('./API');
 $(function () {
     $('#searchByPrice').click(function () {
+        document.location.href = '/show.html';
         searchByPrice();
     });
     $('#searchByCompetitor').click(function () {
+        document.location.href = '/show.html';
         searchByCompetitor();
     });
     $('#searchByPeriod').click(function () {
+        document.location.href = '/show.html';
         searchByPeriod();
     });
 });

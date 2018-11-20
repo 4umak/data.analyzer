@@ -25,6 +25,10 @@ module.exports = function(grunt) {
             competitor: {
                 src: 'Frontend/src/competitor.js',
                 dest: 'Frontend/www/assets/js/competitor.js'
+            },
+            showFilters: {
+                src: 'Frontend/src/showFilters.js',
+                dest: 'Frontend/www/assets/js/showFilters.js'
             }
         }
     };
@@ -39,7 +43,8 @@ module.exports = function(grunt) {
                 'browserify:main',
                 'browserify:parsed',
                 'browserify:filters',
-                'browserify:competitor'
+                'browserify:competitor',
+                'browserify:showFilters'
             ]
         }
     };
@@ -55,7 +60,8 @@ module.exports = function(grunt) {
             'browserify:main',
             'browserify:parsed',
             'browserify:filters',
-            'browserify:competitor'
+            'browserify:competitor',
+            'browserify:showFilters'
         ]
     );
 

@@ -201,7 +201,7 @@ exports.parseMobilluck = function(req,res){
             if(typeof data.price === "undefined")
                 price = "Немає в наявності";
             else
-                price = data.price;
+                price = data.price.toString() + " грн";
             var current = new Date();
             var day = current.getDate();
             var month = current.getMonth() + 1;

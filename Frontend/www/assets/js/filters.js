@@ -69,36 +69,57 @@ exports.parseOfficeman = function (url, callback) {
   backendPost('/api/parseOfficeman/', url, callback);
 };
 
-exports.searchByPrice = function (articul,comparator,goods,callback) {
+exports.searchByPrice = function (articul,comparator,callback) {
     const obj = {
         articul: articul,
-        comparator: comparator,
-        goods: goods
+        comparator: comparator
     };
-    console.log("in API " + "   " + articul + "   " + comparator + "---" + obj.articul);
+    console.log("in API " + "   " + articul + "   " + comparator);
     backendPost('/api/searchByPrice/', obj, callback);
+};
+
+exports.searchByCompetitor = function (name, callback) {
+    backendPost('/api/searchByCompetitor/', name, callback);
+};
+
+exports.searchByPeriod = function (articul,date1,date2, callback) {
+    const obj = {
+        articul: articul,
+        date1: date1,
+        date2: date2
+    };
+    backendPost('/api/searchByPeriod/', obj, callback);
 };
 },{}],2:[function(require,module,exports){
 var API = require('./API');
 $(function () {
-    var articul2 = $('#name2_input').val();
-    var articul3 = $('#name3_input').val();
-    var date1 = $('#date1_input').val();
-    var date2 = $('#date2_input').val();
     $('#searchByPrice').click(function () {
         searchByPrice();
+    });
+    $('#searchByCompetitor').click(function () {
+        searchByCompetitor();
+    });
+    $('#searchByPeriod').click(function () {
+        searchByPeriod();
     });
 });
 
 function searchByPrice() {
     var articul1 = $('#name1_input').val();
     var comparator = $('#pc_input').val();
-    var goods = [];
-        API.showGoods(function (req, res) {
-        for(var i = 0; i< res.length;i++)
-            goods.push(res[i]);
-    });
-    console.log("in Filters " + articul1 + "  " + comparator + "   "+ goods);
-    API.searchByPrice(articul1,comparator, goods);
+    console.log("in Filters " + articul1 + "  " + comparator);
+    API.searchByPrice(articul1,comparator);
+}
+
+function searchByCompetitor() {
+    var name = $('#name2_input').val();
+    API.searchByCompetitor(name);
+}
+
+function searchByPeriod(){
+    var articul3 = $('#name3_input').val();
+    var date1 = $('#date1_input').val();
+    var date2 = $('#date2_input').val();
+    API.searchByPeriod(articul3, date1, date2);
 }
 },{"./API":1}]},{},[2]);

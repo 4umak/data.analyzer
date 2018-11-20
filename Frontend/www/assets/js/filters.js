@@ -69,10 +69,11 @@ exports.parseOfficeman = function (url, callback) {
   backendPost('/api/parseOfficeman/', url, callback);
 };
 
-exports.searchByPrice = function (articul,comparator, callback) {
+exports.searchByPrice = function (articul,comparator,goods,callback) {
     const obj = {
         articul: articul,
-        comparator: comparator
+        comparator: comparator,
+        goods: goods
     };
     console.log("in API " + "   " + articul + "   " + comparator + "---" + obj.articul);
     backendPost('/api/searchByPrice/', obj, callback);
@@ -92,7 +93,12 @@ $(function () {
 function searchByPrice() {
     var articul1 = $('#name1_input').val();
     var comparator = $('#pc_input').val();
-    console.log("in Filters " + articul1 + "  " + comparator);
-    API.searchByPrice(articul1,comparator);
+    var goods = [];
+        API.showGoods(function (req, res) {
+        for(var i = 0; i< res.length;i++)
+            goods.push(res[i]);
+    });
+    console.log("in Filters " + articul1 + "  " + comparator + "   "+ goods);
+    API.searchByPrice(articul1,comparator, goods);
 }
 },{"./API":1}]},{},[2]);

@@ -69,10 +69,11 @@ exports.parseOfficeman = function (url, callback) {
   backendPost('/api/parseOfficeman/', url, callback);
 };
 
-exports.searchByPrice = function (articul,comparator, callback) {
+exports.searchByPrice = function (articul,comparator,goods,callback) {
     const obj = {
         articul: articul,
-        comparator: comparator
+        comparator: comparator,
+        goods: goods
     };
     console.log("in API " + "   " + articul + "   " + comparator + "---" + obj.articul);
     backendPost('/api/searchByPrice/', obj, callback);

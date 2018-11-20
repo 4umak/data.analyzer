@@ -269,17 +269,25 @@ exports.writeCompetitors = function (req, res) {
 exports.searchByPrice = function (req, res) {
     var articul = req.body.articul;
     var comparator = req.body.comparator;
-    console.log(articul + "  -  " + comparator );//+ comparator);
-    var dataset = [];
-    var goodsMap = showGoods.body.res;
-    /*Goods.find({}, function (err, data) {
-        data.forEach(function (good) {
-           // console.log(good);
-            goodsMap.push(good);
-        })
-    });*/
-    console.log("###################################\n"+ goodsMap);
-    //var result = filters.filterByPrice(articul,comparator, dataset,goods);
+    var dataset = []; // all parsed data
+    var goods = []; // all goods
+    var result = filters.filterByPrice(articul,comparator, dataset,goods);
+    //res.send(result);
+};
+
+exports.searchByCompetitor = function(req, res){
+    var name = req.body.name;
+    var dataset = []; // all parsed data
+    var result = filters.filterByCompetitor(name,dataset);
+    //res.send(result);
+};
+
+exports.searchByPeriod = function (req, res) {
+    var articul = req.body.articul;
+    var date1 = req.body.date1;
+    var date2 = req.body.date2;
+    var dataset = []; // all parsed data
+    var result = filters.filterByPeriod(articul,date1,date2,dataset);
     //res.send(result);
 };
 

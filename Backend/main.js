@@ -19,6 +19,9 @@ function configureEndpoints(app) {
     app.post('/api/parseOfficeman/', api.parseOfficeman);
     app.post('/api/parseUrls/', api.writeCompetitors);
     app.post('/api/searchByPrice/',api.searchByPrice);
+    app.post('/api/searchByPrice/', api.searchByCompetitor);
+    app.post('/api/searchByPeriod/', api.searchByPeriod);
+
     app.get('/', pages.mainPage);
     app.get('/parsed.html', pages.parsedPage);
     app.get('/competitor.html', pages.competitor);

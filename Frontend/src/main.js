@@ -61,6 +61,10 @@ function showGoods(list) {
     function showOneItem(item) {
         var html_code = Templates.oneItem({item: item});
         var $node = $(html_code);
+        
+        $node.find('.delete').click(function () {
+            console.log('delete');
+        });
         $products.append($node);
     }
 

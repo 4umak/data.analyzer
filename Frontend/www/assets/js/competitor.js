@@ -82,10 +82,10 @@ exports.set = function (key, value) {
 
 var ejs = require('ejs');
 
-exports.oneItem = ejs.compile("<div class=\"row\">\r\n    <div class=\"one-item articul col-xs-1\"><%= item.id%></div>\r\n    <div class=\"one-item name col-xs-2\"><%= item.articul%></div>\r\n    <div class=\"one-item brand col-xs-4\"><%= item.name%></div>\r\n    <div class=\"one-item supplier col-xs-2\"><%= item.brand%></div>\r\n    <div class=\"one-item price col-xs-1\"><%= item.price%>$</div>\r\n    <div class=\"one-item action col-xs-2\"><button>Edit</button><button>Delete</button></div>\r\n</div>");
-exports.oneParsed = ejs.compile("<div class=\"row\">\r\n    <div class=\"one-item col-xs-2\"><%= item.time%></div>\r\n    <div class=\"one-item col-xs-2\"><%= item.name%></div>\r\n    <div class=\"one-item col-xs-6\"><%= item.item_name%></div>\r\n    <div class=\"one-item col-xs-2\"><%= item.price%></div>\r\n</div>");
-exports.competitorName = ejs.compile("<div class=\"a\">\r\n    <div class=\"nm col-md-12 competitor-name\" id=\"<%= competitor.name%>\"><a><%= competitor.name%></a></div>\r\n</div>");
-exports.competitorOneGoods = ejs.compile("<div class=\"table-row\">\r\n    <div class=\"col-item size-1 date\"><%= item.time%></div>\r\n    <div class=\"col-item size-2 name\"><%= item.name%></div>\r\n    <div class=\"col-item size-1 price\"><%= item.price%></div>\r\n    <div class=\"col-item size-1 url\"><a href=\"<%= item.url%>\" target=\"_blank\"><%= item.url%></a></div>\r\n</div>");
+exports.oneItem = ejs.compile("<div class=\"row\">\n    <div class=\"one-item articul col-xs-1\"><%= item.id%></div>\n    <div class=\"one-item name col-xs-2\"><%= item.articul%></div>\n    <div class=\"one-item brand col-xs-4\"><%= item.name%></div>\n    <div class=\"one-item supplier col-xs-2\"><%= item.brand%></div>\n    <div class=\"one-item price col-xs-1\"><%= item.price%>$</div>\n    <div class=\"one-item action col-xs-2\"><button class=\"edit\">Edit</button><button class=\"delete\">Delete</button></div>\n</div>");
+exports.oneParsed = ejs.compile("<div class=\"row\">\n    <div class=\"one-item col-xs-2\"><%= item.time%></div>\n    <div class=\"one-item col-xs-2\"><%= item.name%></div>\n    <div class=\"one-item col-xs-6\"><%= item.item_name%></div>\n    <div class=\"one-item col-xs-2\"><%= item.price%></div>\n</div>");
+exports.competitorName = ejs.compile("<div class=\"a\">\n    <div class=\"nm col-md-12 competitor-name\" id=\"<%= competitor.name%>\"><a><%= competitor.name%></a></div>\n</div>");
+exports.competitorOneGoods = ejs.compile("<div class=\"table-row\">\n    <div class=\"col-item size-1 date\"><%= item.time%></div>\n    <div class=\"col-item size-2 name\"><%= item.name%></div>\n    <div class=\"col-item size-1 price\"><%= item.price%></div>\n    <div class=\"col-item size-1 url\"><a href=\"<%= item.url%>\" target=\"_blank\"><%= item.url%></a></div>\n</div>");
 },{"ejs":7}],4:[function(require,module,exports){
 var API = require('./API');
 var Storage = require('./LocalStorage');
@@ -123,12 +123,10 @@ function initialiseGoods(name) {
                 var needed = [];
                 var i;
                 for (i = 0; i < result.length; i++) {
-                    console.log(result[i].name + " ***** " + name);
                     if (result[i].name === name) {
                         needed.push(result[i]);
                     }
                 }
-                console.log(needed);
                 var items = [];
                 for (i = 0; i < res.length; i++) {
                     var find = false;
@@ -140,7 +138,6 @@ function initialiseGoods(name) {
                         articul: res[i].articul
                     };
                     for (var k = 0; k < needed.length; k++) {
-                        console.log(res[i].articul + "   " + needed[k].articul);
                         if (res[i].articul === needed[k].articul) {
                             one = {
                                 name: res[i].name,
@@ -153,12 +150,10 @@ function initialiseGoods(name) {
                             items.push(one);
                         }
                     }
-                    console.log(find);
                     if (!find) {
                         items.push(one);
                     }
                 }
-                console.log(items);
                 var array = [];
                 for (i = 0; i < items.length; i++) {
                     if (!checkIfExist(array, items[i].articul)) array.push(takeMaxDate(items, items[i]));
@@ -221,7 +216,6 @@ function getUrls(name) {
 }
 
 function parse(urls, i, end, competitor, articuls) {
-    console.log(i + "   -    " + end);
     if (i < end) {
         var url = {
             url: urls[i],
@@ -268,6 +262,9 @@ function parse(urls, i, end, competitor, articuls) {
         }
     } else {
         alert("Parsed All!");
+        $products.html('');
+        $products.append('<div class="table-row"><div class="col-item size-1">Date</div><div class="col-item size-2">Name</div><div class="col-item size-1">Price</div><div class="col-item size-1">URL</div></div>');
+        initialiseGoods(competitor);
     }
 }
 },{"./API":1,"./LocalStorage":2,"./Templates":3}],5:[function(require,module,exports){

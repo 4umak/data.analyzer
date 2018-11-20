@@ -173,5 +173,8 @@ function parse(urls, i, end, competitor, articuls) {
         }
     } else {
         alert("Parsed All!");
+        $products.html('');
+        $products.append('<div class="table-row"><div class="col-item size-1">Date</div><div class="col-item size-2">Name</div><div class="col-item size-1">Price</div><div class="col-item size-1">URL</div></div>');
+        initialiseGoods(competitor);
     }
 }

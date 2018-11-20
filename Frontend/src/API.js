@@ -67,3 +67,12 @@ exports.parseNobu = function (url, callback) {
 exports.parseOfficeman = function (url, callback) {
   backendPost('/api/parseOfficeman/', url, callback);
 };
+
+exports.searchByPrice = function (articul,comparator, callback) {
+    const obj = {
+        articul: articul,
+        comparator: comparator
+    };
+    console.log("in API " + "   " + articul + "   " + comparator + "---" + obj.articul);
+    backendPost('/api/searchByPrice/', obj, callback);
+};

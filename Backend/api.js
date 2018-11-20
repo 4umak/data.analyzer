@@ -1,4 +1,5 @@
 var db = require('./database.js');
+var filters = require('./filters.js');
 var osmosis = require('osmosis');
 var Goods = db.Goods;
 var Parsed = db.Parsed;
@@ -264,3 +265,21 @@ exports.writeCompetitors = function (req, res) {
         }
     )
 };
+
+exports.searchByPrice = function (req, res) {
+    var articul = req.body.articul;
+    var comparator = req.body.comparator;
+    console.log(articul + "  -  " + comparator );//+ comparator);
+    var dataset = [];
+    var goodsMap = showGoods.body.res;
+    /*Goods.find({}, function (err, data) {
+        data.forEach(function (good) {
+           // console.log(good);
+            goodsMap.push(good);
+        })
+    });*/
+    console.log("###################################\n"+ goodsMap);
+    //var result = filters.filterByPrice(articul,comparator, dataset,goods);
+    //res.send(result);
+};
+

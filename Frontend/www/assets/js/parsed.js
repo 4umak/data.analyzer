@@ -76,28 +76,6 @@ exports.deleteGoods = function (id, callback) {
 exports.editGoods = function (item, callback) {
     backendPost('/api/editGoods/', item, callback);
 };
-
-exports.searchByPrice = function (articul,comparator,callback) {
-    const obj = {
-        articul: articul,
-        comparator: comparator
-    };
-    console.log("in API " + "   " + articul + "   " + comparator);
-    backendPost('/api/searchByPrice/', obj, callback);
-};
-
-exports.searchByCompetitor = function (name, callback) {
-    backendPost('/api/searchByCompetitor/', name, callback);
-};
-
-exports.searchByPeriod = function (articul,date1,date2, callback) {
-    const obj = {
-        articul: articul,
-        date1: date1,
-        date2: date2
-    };
-    backendPost('/api/searchByPeriod/', obj, callback);
-};
 },{}],2:[function(require,module,exports){
 var basil = require('basil.js');
 basil = new basil();

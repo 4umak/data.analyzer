@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c539fdc-823d-4f43-90fc-55c640a60484" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Backend/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/filters.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/views/filter.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/views/filter.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/API.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/API.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/filters.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/www/assets/js/competitor.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/www/assets/js/competitor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/www/assets/js/filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/www/assets/js/filters.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/www/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/www/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/www/assets/js/parsed.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/www/assets/js/parsed.js" afterDir="false" />
-    </list>
+    <list default="true" id="2c539fdc-823d-4f43-90fc-55c640a60484" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -74,7 +63,7 @@
           <entry key="gitignore" value="7" />
           <entry key="hs" value="50" />
           <entry key="html" value="397" />
-          <entry key="js" value="14103" />
+          <entry key="js" value="14164" />
           <entry key="less" value="153" />
         </counts>
       </usages-collector>
@@ -83,7 +72,7 @@
           <entry key="EJS" value="996" />
           <entry key="HTML" value="397" />
           <entry key="Haskell" value="50" />
-          <entry key="JavaScript" value="14102" />
+          <entry key="JavaScript" value="14163" />
           <entry key="Less" value="153" />
           <entry key="PLAIN_TEXT" value="7" />
           <entry key="RegExp" value="1" />
@@ -151,8 +140,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Backend/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
+            <state relative-caret-position="54">
+              <caret line="21" column="47" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -160,8 +149,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Frontend/src/API.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="78" column="39" selection-start-line="78" selection-start-column="39" selection-end-line="78" selection-end-column="39" />
+            <state relative-caret-position="295">
+              <caret line="76" column="2" selection-start-line="76" selection-start-column="2" selection-end-line="76" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -169,8 +158,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Backend/api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="327" column="40" lean-forward="true" selection-start-line="327" selection-start-column="40" selection-end-line="327" selection-end-column="40" />
+            <state>
+              <caret column="34" selection-start-column="34" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -178,17 +167,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Frontend/src/filters.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend/filters.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="24" selection-end-line="73" />
+            <state relative-caret-position="599">
+              <caret line="105" selection-start-line="105" selection-end-line="105" />
             </state>
           </provider>
         </entry>
@@ -301,9 +281,9 @@
         <option value="$PROJECT_DIR$/Frontend/templates/editItem.ejs" />
         <option value="$PROJECT_DIR$/Frontend/src/main.js" />
         <option value="$PROJECT_DIR$/Frontend/src/main.js" />
+        <option value="$PROJECT_DIR$/Frontend/src/API.js" />
+        <option value="$PROJECT_DIR$/Frontend/src/API.js" />
         <option value="$PROJECT_DIR$/Backend/main.js" />
-        <option value="$PROJECT_DIR$/Frontend/src/API.js" />
-        <option value="$PROJECT_DIR$/Frontend/src/API.js" />
         <option value="$PROJECT_DIR$/Backend/api.js" />
         <option value="$PROJECT_DIR$/Backend/api.js" />
         <option value="$PROJECT_DIR$/Frontend/src/filters.js" />
@@ -554,7 +534,7 @@
       <workItem from="1542276451680" duration="9617000" />
       <workItem from="1542450538232" duration="141000" />
       <workItem from="1542476740459" duration="4814000" />
-      <workItem from="1542650309051" duration="25352000" />
+      <workItem from="1542650309051" duration="25608000" />
     </task>
     <task id="LOCAL-00001" summary="added all filters">
       <created>1542287009717</created>
@@ -602,7 +582,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113131000" />
+    <option name="totallyTimeSpent" value="113387000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="28" width="1366" height="740" extended-state="6" />
@@ -611,7 +591,7 @@
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.23099852" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.49925485" visible="true" weight="0.2601626" />
+      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.49925485" weight="0.2601626" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5007452" side_tool="true" weight="0.32520324" />
       <window_info anchor="bottom" id="Version Control" order="2" weight="0.3284553" />
       <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
@@ -903,38 +883,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/src/API.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="76" column="2" selection-start-line="76" selection-start-column="2" selection-end-line="76" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Backend/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
+        <state relative-caret-position="54">
+          <caret line="21" column="47" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Backend/filters.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="24" selection-end-line="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/src/API.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="78" column="39" selection-start-line="78" selection-start-column="39" selection-end-line="78" selection-end-column="39" />
+        <state relative-caret-position="-65">
+          <caret line="5" column="50" lean-forward="true" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Backend/api.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="327" column="40" lean-forward="true" selection-start-line="327" selection-start-column="40" selection-end-line="327" selection-end-column="40" />
+        <state>
+          <caret column="34" selection-start-column="34" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/src/filters.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+        <state relative-caret-position="599">
+          <caret line="105" selection-start-line="105" selection-end-line="105" />
         </state>
       </provider>
     </entry>

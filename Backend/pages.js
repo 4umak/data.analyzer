@@ -37,3 +37,19 @@ exports.showFilters = function (req, res) {
       js: 'showFilters'
   })
 };
+
+exports.showByPrice = function (req,res) {
+    res.render('showByPrice', {
+        pageTitle: 'Data Analyzer',
+        less: 'priceFilter',
+        js: 'showByPrice'
+    })
+};
+
+exports.showByCompetitor = function (req, res) {
+    res.render('showByCompetitor', {
+        pageTitle: 'Data Analyzer',
+        less: 'competitorFilter',
+        js: 'competitorFilter'
+    })
+};

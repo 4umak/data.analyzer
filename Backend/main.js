@@ -26,6 +26,8 @@ function configureEndpoints(app) {
     app.get('/competitor.html', pages.competitor);
     app.get('/filter.html', pages.filter);
     app.get('/show.html', pages.showFilters);
+    app.get('/showByPrice.html',pages.showByPrice);
+    app.get('/showByCompetitor.html',pages.showByCompetitor);
     app.use(express.static(path.join(__dirname, '../Frontend/www')));
 }
 

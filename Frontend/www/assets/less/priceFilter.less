@@ -1,0 +1,76 @@
+@topPanelHeight: 50px;
+@oneRowHeight: 40px;
+
+*{
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body{
+  margin:0;
+  padding:0;
+}
+
+.top-panel{
+  width: 100%;
+  height: @topPanelHeight;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom: solid 2px gainsboro;
+  overflow-y: hidden;
+}
+
+.menu{
+  width: 100%;
+  height: @topPanelHeight;
+  text-align: center;
+  line-height: @topPanelHeight;
+}
+
+.menu-item{
+  padding: 7px;
+  color: white;
+  border-radius: 10px;
+  background-color: lightblue;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.menu-item > a{
+  text-decoration: none;
+  color: white;
+}
+
+.menu-item:hover{
+  padding: 10px;
+  cursor: pointer;
+}
+.products-table-container{
+  padding-top: @topPanelHeight;
+  //display: none;
+}
+.nm{
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: @oneRowHeight;
+  border-right: solid 2px gainsboro;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.one-item{
+  line-height: @oneRowHeight;
+  border-right: solid 2px gainsboro;
+  height: 100%;
+  overflow-y: hidden;
+  text-align: center;
+}
+
+.products-table-container > .row{
+  height: @oneRowHeight;
+  border-bottom: solid 2px gainsboro;
+}

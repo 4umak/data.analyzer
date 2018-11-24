@@ -1,42 +1,65 @@
 var API = require('./API');
+var Templates = require('./Templates');
+var $products = $('#products');
 $(function () {
     $('#searchByPrice').click(function () {
-        document.location.href = '/show.html';
-        searchByPrice();
+        var articul = $('#name1_input').val();
+        var comparator = $('#pc_input').val();
+        document.location.href = '/showByPrice.html';
+        searchByPrice(articul,comparator);
     });
     $('#searchByCompetitor').click(function () {
-        document.location.href = '/show.html';
-        searchByCompetitor();
+        var name = $('#name2_input').val();
+        document.location.href = '/showByCompetitor.html';
+        searchByCompetitor(name);
     });
     $('#searchByPeriod').click(function () {
+        var articul3 = $('#name3_input').val();
+        var date1 = $('#date1_input').val();
+        var date2 = $('#date2_input').val();
         document.location.href = '/show.html';
-        searchByPeriod();
+        searchByPeriod(articul3,date1,date2);
+    });
+    $('#searchByBrand').click(function () {
+        var brand = $('#brand_input').val();
+        document.location.href = '/show.html';
+        searchByBrand(brand);
     });
 });
 
-function searchByPrice() {
-    var articul = $('#name1_input').val();
-    var comparator = $('#pc_input').val();
+function searchByBrand(brand){}
+
+function searchByPrice(articul,comparator) {
     API.showGoods(function (error, result) {
         if (!error) {
             API.takeParsed(function (err, res) {
-                if (!err) var results = filterByPrice(articul, comparator, res, result);
+                if (!err) {
+                    var results = filterByPrice(articul, comparator, res, result);
+                    for(var i =0; i< results.length;i++) {
+                        var html_code = Templates.priceFilter({item: results[i]});
+                        var $node = $(html_code);
+                        $products.append($node);
+                    }
+                }
             });
         }
     });
 }
 
-function searchByCompetitor() {
-    var name = $('#name2_input').val();
+function searchByCompetitor(name) {
     API.takeParsed(function (err, res) {
-       if (!err) var results = filterByCompetitor(name, res);
+       if (!err) {
+           var results = filterByCompetitor(name, res);
+           for(var i =0; i< results.length;i++) {
+               var html_code = Templates.competitorFilter({item: results[i]});
+               var $node = $(html_code);
+               $products.append($node);
+           }
+       }
     });
 }
 
-function searchByPeriod(){
-    var articul3 = $('#name3_input').val();
-    var date1 = $('#date1_input').val();
-    var date2 = $('#date2_input').val();
+function searchByPeriod(articul3,date1,date2){
     API.takeParsed(function (err, res) {
         if(!err) var results = filterByPeriod(articul3, date1, date2, res);
     });
@@ -49,8 +72,18 @@ function filterByPrice(articul, comparator, dataset, goods) {
     let data2 = getByArticul(articul, goods)[0];
     let data = [];
     for (let i = 0; i < data1.length; i++)
-        if (compare(data1[i].price, comparator, data2.price))
-            data.push(data1[i]);
+        if (compare(data1[i].price, comparator, data2.price)) {
+            let product = {
+                articul:articul,
+                name: data2.name,
+                price: data2.price,
+                comp_name: data1[i].name,
+                comp_price: data[i].price,
+                date: data1[i].time,
+                link: data1[i].url
+            };
+            data.push(product);
+        }
     return data;
 }
 

@@ -8,3 +8,4 @@ exports.competitorOneGoods = ejs.compile(fs.readFileSync('./Frontend/templates/c
 exports.editItem = ejs.compile(fs.readFileSync('./Frontend/templates/editItem.ejs', "utf8"));
 exports.priceFilter = ejs.compile(fs.readFileSync('./Frontend/templates/priceFilterItem.ejs','utf8'));
 exports.competitorFilter = ejs.compile(fs.readFileSync('./Frontend/templates/competitorFilter.ejs','utf8'));
+exports.brandFilter = ejs.compile(fs.readFileSync('./Frontend/templates/brandFilterItem.ejs', 'utf-8'));

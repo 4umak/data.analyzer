@@ -53,3 +53,11 @@ exports.showByCompetitor = function (req, res) {
         js: 'competitorFilter'
     })
 };
+
+exports.showByBrand = function (req, res) {
+    res.render('showByBrand',{
+        pageTitle: 'Data Analyzer',
+        less: 'brandFilter',
+        js: 'brandFilter'
+    })
+};

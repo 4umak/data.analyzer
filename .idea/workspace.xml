@@ -1,29 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c539fdc-823d-4f43-90fc-55c640a60484" name="Default Changelist" comment="add filters and competitors">
-      <change afterPath="$PROJECT_DIR$/Backend/views/showByCompetitor.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/views/showByPrice.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/templates/competitorFilter.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/templates/priceFilterItem.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/www/assets/js/ShowByPrice.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/www/assets/js/competitorFilter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/www/assets/less/competitorFilter.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/www/assets/less/priceFilter.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/www/competitorFilter.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/www/priceFIlter.html" afterDir="false" />
+    <list default="true" id="2c539fdc-823d-4f43-90fc-55c640a60484" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Backend/views/showByBrand.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Files/img/delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Files/img/edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/templates/brandFilterItem.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/www/assets/js/brandFilter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/www/assets/less/brandFilter.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/www/brandFilter.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/pages.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/pages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/views/filter.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/views/filter.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/views/competitor.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/views/competitor.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/Templates.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/Templates.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/filters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/templates/competitorOneGoods.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/templates/competitorOneGoods.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/www/assets/js/competitor.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/www/assets/js/competitor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/www/assets/js/filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/www/assets/js/filters.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/www/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/www/assets/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/www/assets/js/parsed.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/www/assets/js/parsed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/www/assets/js/showFilters.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/www/assets/js/showFilters.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/www/assets/less/filter.less" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/www/assets/less/filter.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/www/assets/less/main.less" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/www/assets/less/main.less" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -106,115 +103,79 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="1" />
-          <entry key="ejs" value="58" />
-          <entry key="html" value="25" />
-          <entry key="js" value="40" />
-          <entry key="less" value="11" />
+          <entry key="ejs" value="71" />
+          <entry key="html" value="27" />
+          <entry key="js" value="50" />
+          <entry key="less" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="1" />
-          <entry key="EJS" value="55" />
-          <entry key="HTML" value="25" />
-          <entry key="JavaScript" value="40" />
-          <entry key="Less" value="11" />
+          <entry key="EJS" value="68" />
+          <entry key="HTML" value="27" />
+          <entry key="JavaScript" value="50" />
+          <entry key="Less" value="14" />
           <entry key="PLAIN_TEXT" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="ejs" value="253" />
-          <entry key="html" value="332" />
-          <entry key="js" value="2062" />
-          <entry key="less" value="48" />
-          <entry key="txt" value="92" />
+          <entry key="ejs" value="430" />
+          <entry key="html" value="385" />
+          <entry key="js" value="2930" />
+          <entry key="less" value="56" />
+          <entry key="txt" value="111" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="EJS" value="213" />
-          <entry key="HTML" value="332" />
-          <entry key="JavaScript" value="2062" />
-          <entry key="Less" value="48" />
-          <entry key="PLAIN_TEXT" value="132" />
+          <entry key="EJS" value="390" />
+          <entry key="HTML" value="385" />
+          <entry key="JavaScript" value="2930" />
+          <entry key="Less" value="56" />
+          <entry key="PLAIN_TEXT" value="151" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.33" value="1" />
           <entry key="project.open.time.37" value="1" />
           <entry key="project.open.time.38" value="1" />
           <entry key="project.open.time.49" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Frontend/src/filters.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="45" column="7" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
+            <state relative-caret-position="289">
+              <caret line="56" column="17" lean-forward="true" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend/pages.js">
+        <entry file="file://$PROJECT_DIR$/Backend/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="44" column="24" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
+            <state relative-caret-position="286">
+              <caret line="27" column="79" selection-start-line="27" selection-start-column="79" selection-end-line="27" selection-end-column="79" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frontend/www/assets/js/ShowByPrice.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frontend/templates/competitorFilter.ejs">
+        <entry file="file://$PROJECT_DIR$/Frontend/templates/brandFilterItem.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
+            <state relative-caret-position="119">
+              <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frontend/www/assets/less/competitorFilter.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="75" selection-start-line="75" selection-end-line="75" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frontend/src/Templates.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend/views/showByCompetitor.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frontend/www/assets/js/competitorFilter.js">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -245,12 +206,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Frontend/src/urls.js" />
-        <option value="$PROJECT_DIR$/Backend/views/mainPage.ejs" />
-        <option value="$PROJECT_DIR$/Backend/views/parsedUrls.ejs" />
-        <option value="$PROJECT_DIR$/Backend/views/common/competitor.ejs" />
-        <option value="$PROJECT_DIR$/Backend/views/mainPage.ejs" />
-        <option value="$PROJECT_DIR$/Frontend/www/index.html" />
         <option value="$PROJECT_DIR$/Frontend/www/competitors.html" />
         <option value="$PROJECT_DIR$/Frontend/www/assets/less/competitors.less" />
         <option value="$PROJECT_DIR$/Frontend/www/filter.html" />
@@ -261,13 +216,10 @@
         <option value="$PROJECT_DIR$/Frontend/src/LocalStorage.js" />
         <option value="$PROJECT_DIR$/Frontend/templates/competitorName.ejs" />
         <option value="$PROJECT_DIR$/Frontend/www/assets/less/parsed.less" />
-        <option value="$PROJECT_DIR$/Frontend/templates/competitorOneGoods.ejs" />
-        <option value="$PROJECT_DIR$/Backend/views/competitor.ejs" />
         <option value="$USER_HOME$/Gichva10.hs" />
         <option value="$PROJECT_DIR$/Frontend/src/competitor.js" />
         <option value="$PROJECT_DIR$/Frontend/src/parsed.js" />
         <option value="$PROJECT_DIR$/Frontend/src/parsed.js" />
-        <option value="$PROJECT_DIR$/Frontend/templates/oneItem.ejs" />
         <option value="$PROJECT_DIR$/Frontend/templates/editItem.ejs" />
         <option value="$PROJECT_DIR$/Frontend/src/main.js" />
         <option value="$PROJECT_DIR$/Frontend/src/main.js" />
@@ -286,15 +238,24 @@
         <option value="$PROJECT_DIR$/Frontend/www/assets/less/competitorFilter.less" />
         <option value="$PROJECT_DIR$/Frontend/www/competitorFilter.html" />
         <option value="$PROJECT_DIR$/Frontend/templates/competitorFilterItem.ejs" />
-        <option value="$PROJECT_DIR$/Backend/main.js" />
         <option value="$PROJECT_DIR$/Frontend/templates/competitorFilter.ejs" />
-        <option value="$PROJECT_DIR$/Frontend/src/Templates.js" />
-        <option value="$PROJECT_DIR$/Frontend/src/Templates.js" />
         <option value="$PROJECT_DIR$/Backend/views/showByCompetitor.ejs" />
         <option value="$PROJECT_DIR$/Frontend/www/assets/js/competitorFilter.js" />
-        <option value="$PROJECT_DIR$/Backend/pages.js" />
-        <option value="$PROJECT_DIR$/Backend/pages.js" />
         <option value="$PROJECT_DIR$/Frontend/www/assets/js/ShowByPrice.js" />
+        <option value="$PROJECT_DIR$/Frontend/www/assets/less/main.less" />
+        <option value="$PROJECT_DIR$/Frontend/templates/oneItem.ejs" />
+        <option value="$PROJECT_DIR$/Backend/views/competitor.ejs" />
+        <option value="$PROJECT_DIR$/Frontend/templates/competitorOneGoods.ejs" />
+        <option value="$PROJECT_DIR$/Frontend/templates/brandFilterItem.ejs" />
+        <option value="$PROJECT_DIR$/Frontend/www/brandFilter.html" />
+        <option value="$PROJECT_DIR$/Backend/views/showByBrand.ejs" />
+        <option value="$PROJECT_DIR$/Frontend/src/Templates.js" />
+        <option value="$PROJECT_DIR$/Frontend/src/Templates.js" />
+        <option value="$PROJECT_DIR$/Backend/pages.js" />
+        <option value="$PROJECT_DIR$/Frontend/www/assets/js/brandFilter.js" />
+        <option value="$PROJECT_DIR$/Backend/pages.js" />
+        <option value="$PROJECT_DIR$/Frontend/www/assets/less/brandFilter.less" />
+        <option value="$PROJECT_DIR$/Backend/main.js" />
         <option value="$PROJECT_DIR$/Frontend/src/filters.js" />
       </list>
     </option>
@@ -330,7 +291,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -378,39 +338,11 @@
               <item name="Frontend" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="data.analyzer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="data.analyzer" type="462c0819:PsiDirectoryNode" />
-              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="data.analyzer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="data.analyzer" type="462c0819:PsiDirectoryNode" />
-              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="data.analyzer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="data.analyzer" type="462c0819:PsiDirectoryNode" />
-              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="data.analyzer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="data.analyzer" type="462c0819:PsiDirectoryNode" />
-              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="less" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -478,7 +410,8 @@
       <workItem from="1542450538232" duration="141000" />
       <workItem from="1542476740459" duration="4814000" />
       <workItem from="1542650309051" duration="26494000" />
-      <workItem from="1543090146676" duration="2073000" />
+      <workItem from="1543090146676" duration="2295000" />
+      <workItem from="1543144913055" duration="3414000" />
     </task>
     <task id="LOCAL-00001" summary="added all filters">
       <created>1542287009717</created>
@@ -522,22 +455,38 @@
       <option name="project" value="LOCAL" />
       <updated>1542653856295</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="filters' vision">
+      <created>1543092633615</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1543092633615</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127739000" />
+    <option name="totallyTimeSpent" value="131375000" />
+  </component>
+  <component name="TodoView" selected-index="4">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.23714653" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2403599" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info active="true" anchor="bottom" id="Terminal" order="0" sideWeight="0.49925485" visible="true" weight="0.26010782" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5007452" side_tool="true" weight="0.32520324" />
-      <window_info anchor="bottom" id="Version Control" order="2" weight="0.3284553" />
+      <window_info anchor="bottom" id="Version Control" order="2" weight="0.32614556" />
       <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32749325" />
@@ -545,7 +494,7 @@
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" />
+      <window_info anchor="bottom" id="TODO" order="10" weight="0.32884097" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -574,51 +523,14 @@
     <MESSAGE value="fixed parsers and bd-saves" />
     <MESSAGE value="new parsed page" />
     <MESSAGE value="add filters and competitors" />
-    <option name="LAST_COMMIT_MESSAGE" value="add filters and competitors" />
+    <MESSAGE value="filters' vision" />
+    <option name="LAST_COMMIT_MESSAGE" value="filters' vision" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/www/assets/js/parsed.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/www/assets/less/competitors.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="90" column="1" selection-start-line="90" selection-start-column="1" selection-end-line="90" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/www/assets/less/parsed.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1548">
-          <caret line="86" column="17" selection-start-line="86" selection-start-column="17" selection-end-line="86" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="57" column="35" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/www/assets/js/competitor.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$USER_HOME$/Gichva10.hs" />
-    <entry file="file://$PROJECT_DIR$/Backend/views/mainPage.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="18" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Backend/database.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
@@ -669,27 +581,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/www/assets/less/main.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="81" column="1" lean-forward="true" selection-start-line="60" selection-end-line="81" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/views/showFilters.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="43" column="14" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="43" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/src/competitor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="15" lean-forward="true" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/src/API.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="620">
@@ -716,13 +607,6 @@
         <state relative-caret-position="-1275" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/www/assets/js/filters.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="55" column="47" lean-forward="true" selection-start-line="55" selection-start-column="47" selection-end-line="55" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Backend/views/common/footer.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -739,13 +623,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/www/assets/js/showFilters.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/views/showByPrice.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/src/LocalStorage.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -775,20 +652,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/templates/oneItem.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="60" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/views/competitor.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" selection-start-line="21" selection-end-line="21" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/www/competitors.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="433">
@@ -800,13 +663,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="63" selection-start-line="63" selection-end-line="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/www/priceFIlter.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -831,40 +687,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/templates/competitorOneGoods.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="6" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="61" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/templates/competitorFilterItem.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="26" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/www/assets/less/competitorFilter.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="75" selection-start-line="75" selection-end-line="75" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/src/Templates.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/Frontend/templates/competitorFilterItem.ejs" />
+    <entry file="file://$PROJECT_DIR$/Frontend/www/assets/js/ShowByPrice.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Backend/views/showByCompetitor.ejs">
       <provider selected="true" editor-type-id="text-editor">
@@ -876,27 +701,146 @@
     <entry file="file://$PROJECT_DIR$/Frontend/www/assets/js/competitorFilter.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/templates/competitorFilter.ejs">
+    <entry file="file://$PROJECT_DIR$/Frontend/www/assets/js/filters.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
+        <state relative-caret-position="323">
+          <caret line="614" column="5" selection-start-line="614" selection-start-column="5" selection-end-line="614" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/www/assets/js/ShowByPrice.js">
+    <entry file="file://$PROJECT_DIR$/Backend/views/mainPage.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="18" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/templates/oneItem.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="67" selection-start-line="6" selection-start-column="67" selection-end-line="6" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/www/assets/less/main.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/templates/competitorOneGoods.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="6" lean-forward="true" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/src/competitor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="67" column="23" lean-forward="true" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/www/priceFIlter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="50" selection-end-line="31" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/templates/competitorFilter.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" lean-forward="true" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/views/competitor.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" selection-start-line="20" selection-end-line="20" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/views/showFilters.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="43" column="14" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="43" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/www/brandFilter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="10" selection-start-line="10" selection-end-line="18" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/views/showByPrice.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="41" lean-forward="true" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/views/showByBrand.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="42" lean-forward="true" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/src/Templates.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="104" lean-forward="true" selection-start-line="10" selection-start-column="104" selection-end-line="10" selection-end-column="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/www/assets/js/brandFilter.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Backend/pages.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="44" column="24" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
+        <state relative-caret-position="433">
+          <caret line="60" column="25" lean-forward="true" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/www/assets/less/competitorFilter.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="75" selection-end-line="75" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/www/assets/less/brandFilter.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="75" column="1" selection-start-line="75" selection-start-column="1" selection-end-line="75" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/templates/brandFilterItem.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="27" column="79" selection-start-line="27" selection-start-column="79" selection-end-line="27" selection-end-column="79" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/src/filters.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="45" column="7" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
+        <state relative-caret-position="289">
+          <caret line="56" column="17" lean-forward="true" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
         </state>
       </provider>
     </entry>

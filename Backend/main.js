@@ -25,7 +25,10 @@ function configureEndpoints(app) {
     app.get('/parsed.html', pages.parsedPage);
     app.get('/competitor.html', pages.competitor);
     app.get('/filter.html', pages.filter);
-    app.get('/show.html', pages.showFilters);
+    app.get('/show.html', pages.showByBrand);// виведення таке ж які по брендам
+    app.get('/showByPrice.html',pages.showByPrice);
+    app.get('/showByCompetitor.html',pages.showByCompetitor);
+    app.get('/showByBrand.html', pages.showByBrand);
     app.use(express.static(path.join(__dirname, '../Frontend/www')));
 }
 

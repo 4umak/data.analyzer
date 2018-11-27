@@ -42,7 +42,7 @@ exports.showByPrice = function (req,res) {
     res.render('showByPrice', {
         pageTitle: 'Data Analyzer',
         less: 'priceFilter',
-        js: 'showByPrice'
+        js: 'showFilters'
     })
 };
 
@@ -50,7 +50,7 @@ exports.showByCompetitor = function (req, res) {
     res.render('showByCompetitor', {
         pageTitle: 'Data Analyzer',
         less: 'competitorFilter',
-        js: 'competitorFilter'
+        js: 'showFilters'
     })
 };
 
@@ -58,6 +58,6 @@ exports.showByBrand = function (req, res) {
     res.render('showByBrand',{
         pageTitle: 'Data Analyzer',
         less: 'brandFilter',
-        js: 'brandFilter'
+        js: 'showFilters'
     })
 };

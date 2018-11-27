@@ -3,7 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="2c539fdc-823d-4f43-90fc-55c640a60484" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/views/common/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/views/common/header.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/pages.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/pages.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/views/filter.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/views/filter.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/filters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/showFilters.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/showFilters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/www/assets/js/competitor.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/www/assets/js/competitor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/www/assets/js/filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/www/assets/js/filters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/www/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/www/assets/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/www/assets/js/parsed.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/www/assets/js/parsed.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,7 +26,7 @@
     <session id="705998913">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.17" value="1" />
@@ -31,33 +39,35 @@
           <entry key="project.open.time.40" value="1" />
           <entry key="project.open.time.46" value="1" />
           <entry key="project.open.time.47" value="1" />
+          <entry key="project.open.time.48" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.54" value="1" />
           <entry key="project.open.time.59" value="1" />
           <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.66" value="1" />
           <entry key="project.open.time.89" value="1" />
-          <entry key="project.opened" value="19" />
+          <entry key="project.opened" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="ejs" value="53" />
+          <entry key="ejs" value="73" />
           <entry key="gitignore" value="1" />
           <entry key="hs" value="1" />
           <entry key="html" value="9" />
-          <entry key="js" value="96" />
+          <entry key="js" value="106" />
           <entry key="json" value="5" />
-          <entry key="less" value="10" />
+          <entry key="less" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="EJS" value="53" />
+          <entry key="EJS" value="73" />
           <entry key="HTML" value="9" />
           <entry key="Haskell" value="1" />
           <entry key="JSON" value="5" />
-          <entry key="JavaScript" value="96" />
-          <entry key="Less" value="9" />
+          <entry key="JavaScript" value="106" />
+          <entry key="Less" value="10" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -67,7 +77,7 @@
           <entry key="gitignore" value="7" />
           <entry key="hs" value="50" />
           <entry key="html" value="397" />
-          <entry key="js" value="14404" />
+          <entry key="js" value="14918" />
           <entry key="less" value="156" />
         </counts>
       </usages-collector>
@@ -77,7 +87,7 @@
           <entry key="EJS" value="1035" />
           <entry key="HTML" value="397" />
           <entry key="Haskell" value="50" />
-          <entry key="JavaScript" value="14402" />
+          <entry key="JavaScript" value="14916" />
           <entry key="Less" value="156" />
           <entry key="PLAIN_TEXT" value="7" />
           <entry key="RegExp" value="1" />
@@ -134,19 +144,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend/views/mainPage.ejs">
+        <entry file="file://$PROJECT_DIR$/Frontend/src/filters.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="5" selection-end-column="72" />
+            <state relative-caret-position="259">
+              <caret line="84" column="58" selection-start-line="84" selection-start-column="58" selection-end-line="84" selection-end-column="58" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frontend/www/assets/price.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Frontend/src/showFilters.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
-              <caret line="55" column="7" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="55" selection-end-column="7" />
+            <state relative-caret-position="774">
+              <caret line="43" column="9" lean-forward="true" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -154,49 +164,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Backend/views/showFilters.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="72" selection-start-line="5" selection-start-column="72" selection-end-line="5" selection-end-column="72" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frontend/src/filters.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frontend/src/showFilters.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend/views/competitor.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gruntfile.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1026">
-              <caret line="57" column="32" lean-forward="true" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Backend/views/common/header.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+            <state relative-caret-position="720">
+              <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -204,10 +173,46 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Backend/pages.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+            <state relative-caret-position="1116">
+              <caret line="62" column="2" lean-forward="true" selection-start-line="62" selection-start-column="2" selection-end-line="62" selection-end-column="2" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend/views/showByBrand.ejs">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Frontend/templates/brandFilterItem.ejs">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend/views/showByCompetitor.ejs">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend/views/showByPrice.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-46" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Frontend/templates/priceFilterItem.ejs">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -229,6 +234,7 @@
       <find>arr</find>
       <find>console</find>
       <find>html</find>
+      <find>Storage</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -256,7 +262,6 @@
         <option value="$PROJECT_DIR$/Frontend/www/competitors.html" />
         <option value="$PROJECT_DIR$/Frontend/www/assets/less/competitors.less" />
         <option value="$PROJECT_DIR$/Frontend/www/filter.html" />
-        <option value="$PROJECT_DIR$/Backend/views/filter.ejs" />
         <option value="$PROJECT_DIR$/Backend/views/filtersPage.ejs" />
         <option value="$PROJECT_DIR$/Backend/views/parsedPage.ejs" />
         <option value="$PROJECT_DIR$/Backend/views/parsedPage.ejs" />
@@ -280,14 +285,15 @@
         <option value="$PROJECT_DIR$/Backend/api.js" />
         <option value="$PROJECT_DIR$/Backend/api.js" />
         <option value="$PROJECT_DIR$/Frontend/www/assets/less/filter.less" />
+        <option value="$PROJECT_DIR$/Backend/views/showFilters.ejs" />
+        <option value="$PROJECT_DIR$/Gruntfile.js" />
+        <option value="$PROJECT_DIR$/Backend/views/common/header.ejs" />
+        <option value="$PROJECT_DIR$/Backend/views/filter.ejs" />
         <option value="$PROJECT_DIR$/Backend/pages.js" />
         <option value="$PROJECT_DIR$/Backend/pages.js" />
         <option value="$PROJECT_DIR$/Backend/main.js" />
-        <option value="$PROJECT_DIR$/Backend/views/showFilters.ejs" />
         <option value="$PROJECT_DIR$/Frontend/src/filters.js" />
         <option value="$PROJECT_DIR$/Frontend/src/showFilters.js" />
-        <option value="$PROJECT_DIR$/Gruntfile.js" />
-        <option value="$PROJECT_DIR$/Backend/views/common/header.ejs" />
       </list>
     </option>
   </component>
@@ -310,7 +316,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="247" />
     <option name="y" value="307" />
     <option name="width" value="882" />
@@ -322,7 +328,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -378,18 +383,11 @@
               <item name="www" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="data.analyzer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="data.analyzer" type="462c0819:PsiDirectoryNode" />
-              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="less" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -453,7 +451,9 @@
       <workItem from="1542450538232" duration="141000" />
       <workItem from="1542476740459" duration="4814000" />
       <workItem from="1542650309051" duration="26768000" />
-      <workItem from="1543244140272" duration="1513000" />
+      <workItem from="1543244140272" duration="4483000" />
+      <workItem from="1543283151440" duration="659000" />
+      <workItem from="1543291187886" duration="1385000" />
     </task>
     <task id="LOCAL-00001" summary="added all filters">
       <created>1542287009717</created>
@@ -501,14 +501,14 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116060000" />
+    <option name="totallyTimeSpent" value="121074000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="28" width="1366" height="740" extended-state="7" />
+    <frame x="0" y="28" width="1366" height="740" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.23099852" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.22727273" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.49925485" visible="true" weight="0.2601626" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5007452" side_tool="true" weight="0.32520324" />
@@ -552,31 +552,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="add filters and competitors" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="23" lean-forward="true" selection-end-line="1" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/osmosis/lib/commands/data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/response.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="766" column="9" selection-start-line="766" selection-start-column="9" selection-end-line="766" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/src/oo.js" />
-    <entry file="file://$PROJECT_DIR$/Frontend/src/parserExcel.js" />
-    <entry file="file://$PROJECT_DIR$/Frontend/src/urls.js" />
-    <entry file="file://$PROJECT_DIR$/Backend/views/parsedUrls.ejs" />
     <entry file="file://$PROJECT_DIR$/Frontend/www/takesUrls.html" />
     <entry file="file://$PROJECT_DIR$/Frontend/www/parsed.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -613,13 +588,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/views/parsedPage.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Backend/views/filtersPage.ejs" />
     <entry file="file://$PROJECT_DIR$/Frontend/www/assets/js/urls.js" />
     <entry file="file://$PROJECT_DIR$/Frontend/www/assets/js/filters.js">
@@ -649,13 +617,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/src/LocalStorage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/templates/competitorName.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -666,13 +627,7 @@
     <entry file="file://$PROJECT_DIR$/Frontend/www/assets/js/competitor.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$USER_HOME$/Gichva10.hs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="185" column="7" lean-forward="true" selection-start-line="185" selection-start-column="7" selection-end-line="185" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Gichva10.hs" />
     <entry file="file://$PROJECT_DIR$/Frontend/templates/competitorOneGoods.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -684,13 +639,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="175" column="52" selection-start-line="175" selection-start-column="52" selection-end-line="175" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/templates/oneParsed.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -715,20 +663,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/src/parsed.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="65" column="44" selection-start-line="65" selection-start-column="44" selection-end-line="65" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1728">
-          <caret line="96" column="58" selection-start-line="96" selection-start-column="58" selection-end-line="96" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Backend/database.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
@@ -744,13 +678,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Backend/filters.js" />
-    <entry file="file://$PROJECT_DIR$/Backend/api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="34" selection-start-column="34" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/www/assets/less/filter.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
@@ -758,55 +685,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/views/filter.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="6" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/www/assets/price.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="990">
-          <caret line="55" column="7" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="55" selection-end-column="7" />
+          <caret line="55" column="7" selection-start-line="10" selection-start-column="4" selection-end-line="55" selection-end-column="7" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/views/showFilters.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="72" selection-start-line="5" selection-start-column="72" selection-end-line="5" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/src/filters.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/src/showFilters.js">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Backend/views/competitor.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/pages.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+        <state relative-caret-position="306">
+          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -820,14 +709,7 @@
     <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1026">
-          <caret line="57" column="32" lean-forward="true" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/views/mainPage.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="5" selection-end-column="72" />
+          <caret line="57" column="32" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -840,8 +722,124 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Backend/views/common/header.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+        <state relative-caret-position="180">
+          <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/views/mainPage.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="60" column="23" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/views/parsedPage.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/views/filter.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1728">
+          <caret line="96" column="17" lean-forward="true" selection-start-line="96" selection-start-column="17" selection-end-line="96" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/src/parsed.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="774">
+          <caret line="43" column="15" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/templates/oneParsed.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/templates/competitorFilter.ejs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/src/LocalStorage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/www/assets/less/price.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1195" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/templates/priceFilterItem.ejs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/views/showByPrice.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-46" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/views/showFilters.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/views/showByCompetitor.ejs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/views/showByBrand.ejs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/templates/brandFilterItem.ejs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/pages.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1116">
+          <caret line="62" column="2" lean-forward="true" selection-start-line="62" selection-start-column="2" selection-end-line="62" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/src/filters.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="84" column="58" selection-start-line="84" selection-start-column="58" selection-end-line="84" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/src/showFilters.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="774">
+          <caret line="43" column="9" lean-forward="true" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
         </state>
       </provider>
     </entry>

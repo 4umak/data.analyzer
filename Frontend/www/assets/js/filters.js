@@ -145,6 +145,7 @@ function searchByPrice(articul,comparator) {
             API.takeParsed(function (err, res) {
                 if (!err) {
                     var results = filterByPrice(articul, comparator, res, result);
+                    console.log(results);
                     Storage.set('searchByPrice', results);
                     Storage.set('type', 'price');
                     document.location.href = '/showByPrice.html';
@@ -192,37 +193,45 @@ function filterByBrand(brand,goods,parsed) {
 }
 
 function filterByPrice(articul, comparator, dataset, goods) {
+    console.log(comparator + " ----- ");
     let data1 = getByArticul(articul, dataset);
-    let data2 = getByArticul(articul, goods)[0];
+    let data2;
+    for (let i = 0; i < goods.length; i++) {
+        if (goods[i].articul === articul)
+            data2 = goods[i];
+    }
     let data = [];
-    for (let i = 0; i < data1.length; i++)
-        if (compare(data1[i].price, comparator, data2.price)) {
+    for (let i = 0; i < data1.length; i++) {
+        if(compare(data1[i].price, comparator, data2.price)){
+       // if (data1[i].price > data2.price){
             let product = {
-                articul:articul,
+                articul: articul,
                 name: data2.name,
                 price: data2.price,
                 comp_name: data1[i].name,
-                comp_price: data[i].price,
+                comp_price: data1[i].price,
                 date: data1[i].time,
                 link: data1[i].url
             };
             data.push(product);
         }
+    }
     return data;
 }
 
 function compare(a, comparator, b) {
+    console.log(a + "  " + b + "  " + comparator);
     switch (comparator) {
-        case "<" :
+        case "less" :
             return a < b;
             break;
-        case "more", ">" :
+        case "more" :
             return a > b;
             break;
-        case ">=":
+        case "moreEqual":
             return a >= b;
             break;
-        case "<=":
+        case "lessEqual":
             return a <= b;
             break;
         case "===" , "==":
@@ -240,6 +249,7 @@ function getByArticul(articul, dataset) {
         if (dataset[i].articul === articul)
             data.push(dataset[i]);
     }
+    console.log(data);
     return data;
 }
 
@@ -255,8 +265,10 @@ function filterByCompetitor(brand, dataset) {
 function filterByPeriod(articul, date1, date2, dataset) {
     let data = [];
     let goods = getByArticul(articul, dataset);
+    console.log(goods);
     for (let i =0; i< goods.length;i++) {
         if (Date.parse(goods[i].time) > date1 && Date.parse(goods[i].time) < date2)
+            console.log(good[i]);
             data.push(goods[i]);
     }
     return data;
